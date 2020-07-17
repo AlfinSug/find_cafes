@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/pciapcib/jZoom#readme",
   "dependencies": {
-    "jquery": "^1.5.0"
+    "jquery": "^3.5.1"
   }
 }
