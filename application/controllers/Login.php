@@ -10,7 +10,7 @@ class Login extends CI_Controller
     }
     public function index()
     {
-        $this->load->view('login/login-barista');
+        $this->load->view('utils/login');
     }
 
     public function login_kasir()
@@ -24,7 +24,7 @@ class Login extends CI_Controller
             $password = $this->input->post('password');
             $this->login_model->can_login($nama_kasir, $password);
         } else {
-            $this->load->view('login/login-barista');
+            $this->load->view('utils/login');
         }
     }
 

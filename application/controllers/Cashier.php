@@ -14,8 +14,8 @@ class Cashier extends CI_Controller
 		if ($this->Login_model->check_session()) {
 			$data['title'] = 'Cashier';
 			$data['cashier'] = $this->Cashier_model->getAllCashier();
-			$this->load->view('sidebar/sidebar', $data);
-			$this->load->view('data/cashier', $data);
+			$this->load->view('utils/sidebar', $data);
+			$this->load->view('side_owner/cashier', $data);
 		} else {
 			$this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
 			redirect('login');

@@ -16,8 +16,8 @@ class Transaction extends CI_Controller
             $data['title'] = 'Transaction';
             $data['coffee'] = $this->Coffee_model->getAllCoffee();
             $data['trans'] = $this->Trans_model->getAllTrans();
-            $this->load->view('sidebar/sidebar', $data);
-            $this->load->view('data/transaction', $data);
+            $this->load->view('utils/sidebar', $data);
+            $this->load->view('side_owner/transaction', $data);
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
             redirect('login');
@@ -29,18 +29,18 @@ class Transaction extends CI_Controller
     }
 
     public function updates()
-	{
-		$id_trx = $this->input->post('id_trx');
+    {
+        $id_trx = $this->input->post('id_trx');
         $data = [
             "id_kopi" => $this->input->post('menu_kopi', true),
             "jumlah" => $this->input->post('jumlah', true),
             "harga_total" => $this->input->post('harga_total', true),
             "tgl_trx" => $this->input->post('tgl_trx', true)
         ];
-		$this->Trans_model->upTrans($data, $id_trx);
-		$this->session->set_flashdata('edit_success', '<script>swal("Data Change", "Data telah berhasil diubah", "success")</script>');
-		redirect('transaction');
-	}
+        $this->Trans_model->upTrans($data, $id_trx);
+        $this->session->set_flashdata('edit_success', '<script>swal("Data Change", "Data telah berhasil diubah", "success")</script>');
+        redirect('transaction');
+    }
     public function delete($id_trx)
     {
         return $this->Trans_model->delTrans($id_trx);

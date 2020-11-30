@@ -11,8 +11,8 @@ class About extends CI_Controller
 	{
 		if ($this->Login_model->check_session()) {
 			$data['title'] = 'About Us';
-			$this->load->view('sidebar/sidebar', $data);
-			$this->load->view('data/about');
+			$this->load->view('utils/sidebar', $data);
+			$this->load->view('side_owner/about');
 		} else {
 			$this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
 			redirect('login');

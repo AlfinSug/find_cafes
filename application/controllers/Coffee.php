@@ -14,8 +14,8 @@ class Coffee extends CI_Controller
 		if ($this->Login_model->check_session()) {
 			$data['title'] = 'Coffee Catalog';
 			$data['coffee'] = $this->Coffee_model->getAllCoffee();
-			$this->load->view('sidebar/sidebar', $data);
-			$this->load->view('data/coffee', $data);
+			$this->load->view('utils/sidebar', $data);
+			$this->load->view('side_owner/coffee', $data);
 		} else {
 			$this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
 			redirect('login');
@@ -27,7 +27,8 @@ class Coffee extends CI_Controller
 		$id_kopi = $this->input->post('id_kopi');
 		$gambar = $_FILES['gambar']['name'];
 
-		if ($gambar == "") { } else {
+		if ($gambar == "") {
+		} else {
 			$config['upload_path'] = './asset/gambar_kopi';
 			$config['allowed_types'] = 'jpg|png';
 

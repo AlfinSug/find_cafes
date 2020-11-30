@@ -14,8 +14,8 @@ class Dashboard extends CI_Controller
         if ($this->login_model->check_session()) {
             $data['title'] = 'Dashboard';
             $data['laporan'] = $this->Trans_model->getAllTrans();
-            $this->load->view('sidebar/sidebar', $data);
-            $this->load->view('data/dashboard', $data);
+            $this->load->view('utils/sidebar', $data);
+            $this->load->view('side_owner/dashboard', $data);
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
             redirect('login');
