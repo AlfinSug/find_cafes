@@ -8,7 +8,7 @@
             <h4>Find Cafe's</h4>
             <h6>THE BEST INOVATION</h6>
             <div class="main-white-button scroll-to-section">
-              <a href="#reservation">Make A Reservation</a>
+              <a href=" <?= base_url(); ?>auth_login">Make A Reservation</a>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
               <h1 class='title'>Ada Apa Dengan Coffee</h1>
               <p class='description'>Jl. Tegal Sari 10</p>
               <div class="main-text-button">
-                <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
+                <div class="scroll-to-section"><a href="<?= base_url(); ?>auth_login">Make Reservation <i class="fa fa-angle-down"></i></a></div>
               </div>
             </div>
           </div>
