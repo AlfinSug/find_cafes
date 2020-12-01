@@ -66,8 +66,8 @@ https://templatemo.com/tm-558-klassy-cafe
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                            <li class="scroll-to-section"><a class="active" href="<?= base_url(); ?>auth_login">Sign In</a></li>
-                            <li class="scroll-to-section"><a href="<?= base_url(); ?>auth_regist">Create Account</a></li>
+                            <li class="scroll-to-section"><a href="<?= base_url(); ?>auth_login">Sign In</a></li>
+                            <li class="scroll-to-section"><a class="active" href="<?= base_url(); ?>auth_regist">Create Account</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -85,8 +85,8 @@ https://templatemo.com/tm-558-klassy-cafe
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
                     <div class="section-heading">
-                        <h6>Hang Out Now?</h6>
-                        <h2>Welcome again, please sign in here</h2>
+                        <h6>Don't have an account yet?</h6>
+                        <h2>Please register first</h2>
                     </div>
                 </div>
             </div>
@@ -112,30 +112,37 @@ https://templatemo.com/tm-558-klassy-cafe
                                         <div class="col-lg-12">
                                             <div class="row">
                                                 <div class="left-list">
-                                                    <section class="sign-in">
+                                                    <!-- Sign up form -->
+                                                    <section class="signup">
                                                         <div class="container-form">
-                                                            <div class="signin-content">
-                                                                <div class="signin-image">
-                                                                    <figure><img src="assets/images/about-video-bg.jpg" width="100" height="100" alt="sing up image"></figure>
-                                                                </div>
-
-                                                                <div class="signin-form">
+                                                            <div class="signup-content">
+                                                                <div class="signup-form">
                                                                     <h2 class="form-title">User</h2>
-                                                                    <form method="POST" class="register-form" id="login-form">
+                                                                    <form method="POST" class="register-form" id="register-form">
+                                                                        <div class="form-group">
+                                                                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                                                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                                                            <input type="email" name="email" id="email" placeholder="Your Email" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                                                            <input type="password" name="pass" id="pass" placeholder="Password" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                                                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                                                                        </div>
 
-                                                                        <div class="form-group">
-                                                                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
-                                                                        </div>
                                                                         <div class="form-group form-button">
-                                                                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                                                                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
                                                                         </div>
                                                                     </form>
-
+                                                                </div>
+                                                                <div class="signup-image">
+                                                                    <figure><img src="assets/images/about-video-bg.jpg" alt="sing up image"></figure>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -152,34 +159,42 @@ https://templatemo.com/tm-558-klassy-cafe
                                         <div class="col-lg-12">
                                             <div class="row">
                                                 <div class="left-list">
-                                                    <section class="sign-in">
+                                                    <!-- Sign up form -->
+                                                    <section class="signup">
                                                         <div class="container-form">
-                                                            <div class="signin-content">
-                                                                <div class="signin-image">
-                                                                    <figure><img src="assets/images/about-video-bg.jpg" alt="sing up image"></figure>
-                                                                </div>
-
-                                                                <div class="signin-form">
+                                                            <div class="signup-content">
+                                                                <div class="signup-form">
                                                                     <h2 class="form-title">Owner</h2>
-                                                                    <form method="POST" class="register-form" id="login-form">
+                                                                    <form method="POST" class="register-form" id="register-form">
+                                                                        <div class="form-group">
+                                                                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                                                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                                                            <input type="email" name="email" id="email" placeholder="Your Email" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                                                            <input type="password" name="pass" id="pass" placeholder="Password" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                                                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                                                                        </div>
 
-                                                                        <div class="form-group">
-                                                                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
-                                                                        </div>
                                                                         <div class="form-group form-button">
-                                                                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                                                                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
                                                                         </div>
                                                                     </form>
-
+                                                                </div>
+                                                                <div class="signup-image">
+                                                                    <figure><img src="assets/images/about-video-bg.jpg" alt="sing up image"></figure>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </section>
+
                                                 </div>
                                             </div>
                                         </div>
