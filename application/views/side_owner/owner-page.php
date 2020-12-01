@@ -141,9 +141,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                                         </div>
                                                                     </form>
                                                                 </div>
-                                                                <div class="signup-image">
-                                                                    <figure><img src="assets/images/about-video-bg.jpg" alt="sing up image"></figure>
-                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </section>

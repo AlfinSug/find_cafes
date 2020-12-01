@@ -55,7 +55,7 @@
             <h6>About Us</h6>
             <h2>We Leave A Delicious Memory For You</h2>
           </div>
-          <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+          <p>The umkm activity is an activity that is quite broad and very promising for now. A shop / café is one of the businesses in the umkm sector, especially sales. Here our group creates an application.<br><br>Find Cafe's is a mobile-based application as well as a website that can make it easier for users to find hangouts and can also easily reserve hangouts using only gadgets, besides that find cafe also provides access for cafe owners who want to promote stalls or cafes or their products. And find cafe provides features in the form of prices / discounts when we often book or order products through our application / website.</p>
           <div class="row">
             <div class="col-4">
               <img src="assets/images/thumb1.png" alt="">
