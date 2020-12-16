@@ -108,82 +108,59 @@ https://templatemo.com/tm-558-klassy-cafe
                         <div class="col-lg-12">
                             <section class='tabs-content'>
                                 <article id='tabs-1'>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="row">
-                                                <div class="left-list">
-                                                    <section class="sign-in">
-                                                        <div class="container-form">
-                                                            <div class="signin-content">
-                                                                <div class="signin-image">
-                                                                    <figure><img src="assets/images/about-video-bg.jpg" width="100" height="100" alt="sing up image"></figure>
-                                                                </div>
+                                    <section class="sign-in">
+                                        <div class="container-form">
+                                            <div class="signin-content">
+                                                <img src="assets/images/signin_user_img.png" style="min-width: fit-content; height:10%; margin: -10% -5% 0 5%" class="mt-5" width="250" height="50">
 
-                                                                <div class="signin-form">
-                                                                    <h2 class="form-title">User</h2>
-                                                                    <form method="POST" class="register-form" id="login-form">
+                                                <div class="signin-form">
+                                                    <h2 class="form-title">User</h2>
+                                                    <form method="POST" class="register-form" id="login-form">
 
-                                                                        <div class="form-group">
-                                                                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
-                                                                        </div>
-                                                                        <div class="form-group form-button">
-                                                                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
-                                                                        </div>
-                                                                    </form>
-
-                                                                </div>
-                                                            </div>
+                                                        <div class="form-group">
+                                                            <label for="your_email"><i class="zmdi zmdi-email"></i></label>
+                                                            <input type="email" name="email_user" id="your_email" placeholder="Your Email" />
                                                         </div>
-                                                    </section>
-
+                                                        <div class="form-group">
+                                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                                            <input type="password" name="pass_user" id="your_pass" placeholder="Password" />
+                                                        </div>
+                                                        <div class="form-group form-button">
+                                                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                                                        </div>
+                                                    </form>
 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </section>
                                 </article>
                                 <article id='tabs-2'>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="row">
-                                                <div class="left-list">
-                                                    <section class="sign-in">
-                                                        <div class="container-form">
-                                                            <div class="signin-content">
-                                                                <div class="signin-image">
-                                                                    <figure><img src="assets/images/about-video-bg.jpg" alt="sing up image"></figure>
-                                                                </div>
+                                    <section class="sign-in col-md-12">
+                                        <div class="container-form">
+                                            <div class="signin-content">
+                                                <img src="assets/images/signin_owner_img.png" style="min-width: fit-content; height:10%; margin: -10% -5% 0 5%" class="mt-5" width="250" height="50">
+                                                <div class="signin-form">
+                                                    <h2 class="form-title">Owner</h2>
+                                                    <form method="POST" class="register-form" id="login-form">
 
-                                                                <div class="signin-form">
-                                                                    <h2 class="form-title">Owner</h2>
-                                                                    <form method="POST" class="register-form" id="login-form">
-
-                                                                        <div class="form-group">
-                                                                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
-                                                                        </div>
-                                                                        <div class="form-group form-button">
-                                                                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
-                                                                        </div>
-                                                                    </form>
-
-                                                                </div>
-                                                            </div>
+                                                        <div class="form-group">
+                                                            <label for="your_name"><i class="zmdi zmdi-email"></i></label>
+                                                            <input type="email" name="email_cafe" id="email_cafe" placeholder="Your Email Company" />
                                                         </div>
-                                                    </section>
+                                                        <div class="form-group">
+                                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                                                        </div>
+                                                        <div class="form-group form-button">
+                                                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                                                        </div>
+                                                    </form>
+
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </section>
                                 </article>
                             </section>
                         </div>

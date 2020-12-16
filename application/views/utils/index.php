@@ -53,7 +53,7 @@
         <div class="left-text-content">
           <div class="section-heading">
             <h6>About Us</h6>
-            <h2>We Leave A Delicious Memory For You</h2>
+            <h2>We Provide Services For You</h2>
           </div>
           <p>The umkm activity is an activity that is quite broad and very promising for now. A shop / café is one of the businesses in the umkm sector, especially sales. Here our group creates an application.<br><br>Find Cafe's is a mobile-based application as well as a website that can make it easier for users to find hangouts and can also easily reserve hangouts using only gadgets, besides that find cafe also provides access for cafe owners who want to promote stalls or cafes or their products. And find cafe provides features in the form of prices / discounts when we often book or order products through our application / website.</p>
           <div class="row">
@@ -213,21 +213,21 @@
               <div class="phone">
                 <i class="fa fa-phone"></i>
                 <h4>Phone Numbers</h4>
-                <span><br><a href="#">+62 8974879215</a></span>
+                <span><br><a href="tel:628974879215">+62 8974879215</a></span>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="message">
                 <i class="fa fa-envelope"></i>
                 <h4>Emails</h4><br>
-                <span><a href="#">hello@company.com</a>
+                <span><a href="mailto:alfinstudio1@gmail.com">alfinstudio1@gmail.com</a>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="message">
                 <i class="fa fa-instagram"></i>
                 <h4>Instagram</h4><br>
-                <span><a href="#">find.cafes</a>
+                <span><a href="https://www.instagram.com/alfin_studio/">find.cafes</a>
               </div>
             </div>
             <div class="col-lg-3">
@@ -236,88 +236,14 @@
                 <h4>Android Apps</h4>
                 <span><br>
                   <div class="main-brown-button scroll-to-section">
-                    <a href="#reservation">Download Now</a>
+                    <a href="#">Download Now</a>
                   </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="col-lg-6">
-          <div class="contact-form">
-            <form id="contact" action="" method="post">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h4>Table Reservation</h4>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                  <fieldset>
-                    <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                  </fieldset>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                  <fieldset>
-                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
-                  </fieldset>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                  <fieldset>
-                    <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
-                  </fieldset>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                  <fieldset>
-                    <select value="number-guests" name="number-guests" id="number-guests">
-                      <option value="number-guests">Number Of Guests</option>
-                      <option name="1" id="1">1</option>
-                      <option name="2" id="2">2</option>
-                      <option name="3" id="3">3</option>
-                      <option name="4" id="4">4</option>
-                      <option name="5" id="5">5</option>
-                      <option name="6" id="6">6</option>
-                      <option name="7" id="7">7</option>
-                      <option name="8" id="8">8</option>
-                      <option name="9" id="9">9</option>
-                      <option name="10" id="10">10</option>
-                      <option name="11" id="11">11</option>
-                      <option name="12" id="12">12</option>
-                    </select>
-                  </fieldset>
-                </div>
-                <div class="col-lg-6">
-                  <div id="filterDate2">
-                    <div class="input-group date" data-date-format="dd/mm/yyyy">
-                      <input name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-                      <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-th"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                  <fieldset>
-                    <select value="time" name="time" id="time">
-                      <option value="time">Time</option>
-                      <option name="Breakfast" id="Breakfast">Breakfast</option>
-                      <option name="Lunch" id="Lunch">Lunch</option>
-                      <option name="Dinner" id="Dinner">Dinner</option>
-                    </select>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
-                  </fieldset>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div> -->
+
     </div>
   </div>
 </section>
@@ -340,8 +266,8 @@
           <div class="thumb">
             <div class="overlay"></div>
             <ul class="social-icons">
-              <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/628974879215"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a href="https://www.instagram.com/alfinsug/"><i class="fa fa-instagram"></i></a></li>
             </ul>
             <img src="asset/alfin.png" alt="Chef #1">
           </div>
@@ -356,8 +282,8 @@
           <div class="thumb">
             <div class="overlay"></div>
             <ul class="social-icons">
-              <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/6285822601798"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a href="https://www.instagram.com/daffarams_/"><i class="fa fa-instagram"></i></a></li>
             </ul>
             <img src="asset/daffa.png" alt="Chef #2">
           </div>
@@ -372,8 +298,8 @@
           <div class="thumb">
             <div class="overlay"></div>
             <ul class="social-icons">
-              <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/6289616194453"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a href="https://www.instagram.com/dimasfirmanpb/"><i class="fa fa-instagram"></i></a></li>
             </ul>
             <img src="asset/dimas.png" alt="Chef #3">
           </div>
@@ -388,8 +314,8 @@
           <div class="thumb">
             <div class="overlay"></div>
             <ul class="social-icons">
-              <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/6282231113654"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a href="https://www.instagram.com/dickyeardianto/"><i class="fa fa-instagram"></i></a></li>
             </ul>
             <img src="asset/cibob.png" alt="Chef #2">
           </div>
