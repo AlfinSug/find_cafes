@@ -63,6 +63,10 @@
         });
     });
 </script>
+
+<script src="vendor_form/js/jquery-3.3.1.min.js"></script>
+<script src="vendor_form/js/jquery.steps.js"></script>
+<script src="vendor_form/js/main.js"></script>
 </body>
 
 </html>

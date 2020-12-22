@@ -236,9 +236,10 @@ https://templatemo.com/tm-558-klassy-cafe
                         <div class="left-list">
                           <div class="col-lg-12">
                             <div class="tab-item">
-                              <img src="assets/images/tab-item-01.png" alt="">
-                              <h4>Fresh Chicken Salad</h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                              <img src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
+                              <h4>Kofibrik</h4>
+                              <p>Open : Setiap Hari 06.00-22.00</p>
+                              <p>Jl. Nginden Semolo No.78, Ngenden Jangkungan, Kec. Sukolilo, Kota SBY, Jawa Timur 60118</p>
                               <div class="price">
                                 <a class="book-now" href="#"><i class="fa fa-eye"></i></a>
                               </div>
@@ -249,9 +250,11 @@ https://templatemo.com/tm-558-klassy-cafe
                           </div>
                           <div class="col-lg-12">
                             <div class="tab-item">
-                              <img src="assets/images/tab-item-02.png" alt="">
-                              <h4>Orange Juice</h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                              <img src="asset/banner_cafe/starbucks_banner.jpg" alt="">
+                              <h4>Starbucks Jemursari</h4>
+                              <p>Buka : Setiap Hari 08.00-20.00
+                              </p>
+                              <p>Jl. Raya Jemursari No.134, Jemur Wonosari</p>
                               <div class="price">
                                 <a class="book-now" href="#"><i class="fa fa-eye"></i></a>
                               </div>
@@ -262,9 +265,11 @@ https://templatemo.com/tm-558-klassy-cafe
                           </div>
                           <div class="col-lg-12">
                             <div class="tab-item">
-                              <img src="assets/images/tab-item-03.png" alt="">
-                              <h4>Fruit Salad</h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                              <img src="asset/banner_cafe/vivre_banner.jpeg" alt="">
+                              <h4>Vivre</h4>
+                              <p>Open : Setiap Hari 15.00-22.00</p>
+                              <p>Jl. Sono Kembang No.2, Embong Kaliasin, Kec. Genteng, Kota SBY, Jawa Timur 60271
+                              </p>
                               <div class="price">
                                 <a class="book-now" href="#"><i class="fa fa-eye"></i></a>
                               </div>
