@@ -12,16 +12,16 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -206,6 +206,50 @@
 </div>
 
 
+<!-- #/ container -->
+<!-- Modal Tambah -->
+<div class="modal fade" id="reservNow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reservasi Kofibrik</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="POST">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 col-lg-3">
+                            <div class="nav flex-column nav-pills">
+                                <a href="#v-pills-order" data-toggle="pill" class="nav-link active show ">Pilih Pesanan</a>
+                                <a href="#v-pills-checkout" data-toggle="pill" class="nav-link">Proses Checkout</a>
+                                <a href="#v-pills-payment" data-toggle="pill" class="nav-link ">Pembayaran</a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-lg-9">
+                            <div class="tab-content">
+                                <div id="v-pills-order" class="tab-pane fade active show">
+                                    <!-- menu -->
+                                </div>
+                                <div id="v-pills-checkout" class="tab-pane fade">
+                                    <!-- informasi -->
+                                </div>
+                                <div id="v-pills-payment" class="tab-pane fade">
+                                    <!-- upload Pembayaran -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-warning text-white">Pesan Sekarang</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--**********************************
         Scripts
     ***********************************-->
@@ -254,6 +298,10 @@
 <script src="quixlab/js/plugins-init/form-pickers-init.js"></script>
 <script src="quixlab/plugins/sweetalert/js/sweetalert.min.js"></script>
 <script src="quixlab/plugins/sweetalert/js/sweetalert.init.js"></script>
+
+<script src="quixlab/plugins/jquery-steps/build/jquery.steps.min.js"></script>
+<script src="quixlab/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="quixlab/js/plugins-init/jquery-steps-init.js"></script>
 
 </body>
 

@@ -30,6 +30,7 @@
     <link href="quixlab/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <link href="quixlab/plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
     <link rel="stylesheet" href="quixlab/icons/font-awesome/css/font-awesome.min.css">
+    <link href="quixlab/plugins/jquery-steps/css/jquery.steps.css" rel="stylesheet">
 
 </head>
 
