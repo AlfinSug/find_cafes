@@ -57,7 +57,7 @@
                             </li>
 
                         </ul>
-                        <button class="btn btn-info btn-lg mt-5" data-target="#updatePassword" data-toggle="modal" style="display: block; margin: auto;">Ubah Password</button>
+                        <button class="btn btn-warning text-white btn-lg mt-5" data-target="#updatePassword" data-toggle="modal" style="display: block; margin: auto;">Ubah Password</button>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                             </div>
                             <div class="input-group">
 
-                                <button class="btn btn-info btn-lg mt-2" style="display: block; margin: auto;">Simpan</button>
+                                <button class="btn btn-warning text-white btn-lg mt-2" style="display: block; margin: auto;">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -130,58 +130,42 @@
     </div>
     <!-- #/ container -->
 
-    <!-- Modal Tambah Pasir-->
+    <!-- Modal Update Password-->
     <div class="modal fade" id="updatePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Pasir</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form action="#" method="POST">
                         <div class="input-group form-group">
-                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Jenis Pasir</span>
+                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Password Lama</span>
                             </label>
-                            <input type="text" class="form-control rounded" placeholder="Contoh : Silika" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append float-left">
-                                <div class="input-group-text text-primary"><i class="ti-shield"></i></div>
-                            </div>
+                            <input type="password" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+
                         </div>
 
                         <div class="input-group form-group">
-                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Berat Pasir (Ton)</span>
+                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Password Baru</span>
                             </label>
-                            <input type="text" class="form-control rounded" placeholder="Contoh : 50" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                                <span class="input-group-text text-primary">Ton</span>
-                            </div>
+                            <input type="password" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+
                         </div>
 
                         <div class="input-group form-group">
-                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Harga Beli (Ton)</span>
+                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Konfirmasi Password Baru</span>
                             </label>
-                            <input type="text" class="form-control rounded" placeholder="Contoh : 5000000" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                                <span class="input-group-text text-primary">/ton</span>
-                            </div>
-                        </div>
+                            <input type="password" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
 
-                        <div class="input-group form-group">
-                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Harga Jual (Ton)</span>
-                            </label>
-                            <input type="text" class="form-control rounded" placeholder="Contoh : 5000000" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                                <span class="input-group-text text-primary">/ton</span>
-                            </div>
                         </div>
-
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-primary">Tambahkan</button>
+                    <button type="button" class="btn btn-warning text-white">Ubah</button>
                 </div>
             </div>
         </div>

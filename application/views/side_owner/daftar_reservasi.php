@@ -11,7 +11,23 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Data Reservasi</h3>
+                        <span class="mb-4">
+                            <div class="ml--5 header-left">
+                                <h3>User Reservasi</h3>
+                            </div>
+                            <div class="header-right">
+                                <div class="input-group icons">
+                                    <input type="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                                    <div class="drop-down animated flipInX d-md-none">
+                                        <form action="#">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </span>
                         <div class="active-member mt-4">
                             <div class="table-responsive mt-2">
                                 <table class="table table-xs mb-0">
@@ -36,7 +52,7 @@
                                             <td>5 Kursi
                                             <td>Senin, 23 April 2020</td>
                                             <td><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima</td>
-                                            <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-image mr-2"></i> Lihat Menu</button></td>
+                                            <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td>
                                             <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
                                             <td><button type="button" class="btn btn-success text-white" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-check mr-2"></i> Terima</button></td>
                                             <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-close mr-2"></i> Tolak</button></td>
@@ -74,7 +90,84 @@
 <!--**********************************
         Main wrapper end
     ***********************************-->
+<!-- Modal Bukti Pembayaran -->
+<div class="modal fade " id="detail-bukti-pembayaran" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail Bukti Pembayaran</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="quixlab/images/media/media-1.png" type="application/pdf" width="100%" height="500px" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Modal Detail Menu -->
+<div class="modal fade" id="detail-pesanan" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail Menu</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="input-group mt-2">
+                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
+                        <div class="form-group">
+                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
+                            <span class="ml-5 row">
+                                <h6 class="mt-2 h6">x 4</h6>
+                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-2">
+                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
+                        <div class="form-group">
+                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
+                            <span class="ml-5 row">
+                                <h6 class="mt-2 h6">x 4</h6>
+                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-2">
+                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
+                        <div class="form-group">
+                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
+                            <span class="ml-5 row">
+                                <h6 class="mt-2 h6">x 4</h6>
+                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-5">
+                        <div class="form-group">
+                            <span class="ml-3 row">
+                                <h3 class="mt-2 h3">Total</h3>
+                                <h3 class="float-right ml-5 mt-2 h3"><strong class="ml-5 text-success">Rp 60.000,-</strong> </h3>
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!--**********************************
         Scripts
     ***********************************-->

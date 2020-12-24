@@ -207,7 +207,7 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="<?= base_url(); ?>profil_user"><i class="icon-user"></i> <span>Profil Saya</span></a>
+                                            <a href="<?= base_url(); ?>profil_user"><i class="icon-user"></i> <span>Profil Cafe</span></a>
                                         </li>
 
                                         <li><a href="page-login.html"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>

@@ -17,7 +17,7 @@
 
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-2" id="basic-addon1">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal"><i class="ti-plus mr-2"></i>Tambah Kategori</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addKategori"><i class="ti-plus mr-2"></i>Tambah Kategori</button>
                                         </span>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@
                                         <tr>
                                             <td>K001</td>
                                             <td>Snack</td>
-                                            <td><button type="button" class="btn btn-success text-white" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-pencil mr-2"></i> Edit</button></td>
+                                            <td><button type="button" class="btn btn-success text-white" data-toggle="modal" data-target="#updateKategori"><i class="ti-pencil mr-2"></i> Edit</button></td>
                                             <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-eraser mr-2"></i> Delete</button></td>
                                         </tr>
                                     </tbody>
@@ -74,7 +74,71 @@
 <!--**********************************
         Main wrapper end
     ***********************************-->
+<!-- modal kategori -->
+<div class="modal fade" id="addKategori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Kategori</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="POST">
+                    <div class="input-group form-group">
+                        <label class="col-lg-12 col-form-label text-left" for="val-skill">ID Kategori</span>
+                        </label>
+                        <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)" readonly>
 
+                    </div>
+                    <div class="input-group form-group">
+                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Kategori</span>
+                        </label>
+                        <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-warning">Tambahkan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal kategori -->
+<div class="modal fade" id="updateKategori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Kategori</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="POST">
+                    <div class="input-group form-group">
+                        <label class="col-lg-12 col-form-label text-left" for="val-skill">ID Kategori</span>
+                        </label>
+                        <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)" readonly>
+
+                    </div>
+                    <div class="input-group form-group">
+                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Kategori</span>
+                        </label>
+                        <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-warning">Ubah</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <!--**********************************
         Scripts
     ***********************************-->
