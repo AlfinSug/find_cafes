@@ -29,6 +29,7 @@
     <link href="quixlab/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
     <link href="quixlab/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <link href="quixlab/plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
+
     <link rel="stylesheet" href="quixlab/icons/font-awesome/css/font-awesome.min.css">
 
 </head>
@@ -92,6 +93,39 @@
                 </div>
                 <div class="header-right">
                     <ul class="clearfix">
+                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                                <i class="ti-direction-alt"></i>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">Akses Cafe</span>
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2 bg-success"><i class="ti-check"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="h5">Buka Cafe</h6>
+                                                    <span class="notification-text text-muted">Gunakan fitur buka cafe jika cafe masih buka atau sepi pengunjung</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2 bg-danger"><i class="ti-close"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="h5">Tutup Cafe</h6>
+                                                    <span class="notification-text text-muted">Gunakan fitur tutup cafe jika cafe tutup atau ramai pengunjung</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
                                 <i class="mdi mdi-bell-outline"></i>
                                 <span class="badge badge-pill gradient-2">3</span>
@@ -199,24 +233,29 @@
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Main</li>
                     <li>
-                        <a href="<?= base_url(); ?>get_cafe" class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="ti-map-alt"></i><span class="nav-text">All Cafe's</span>
+                        <a href="<?= base_url(); ?>dash_owner" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="ti-layout"></i><span class="nav-text">Dashboard</span>
                         </a>
-
                     </li>
-
+                    <li>
+                        <a href="<?= base_url(); ?>daftar_reservasi" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="ti-menu-alt"></i><span class="nav-text">Daftar Reservasi</span>
+                        </a>
+                    </li>
                     <li class="nav-label">Master</li>
                     <li>
-                        <a href="<?= base_url(); ?>user_reserv" class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="ti-receipt"></i> <span class="nav-text">Reservation</span>
+                        <a href="#" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="ti-clipboard"></i> <span class="nav-text">Menu</span>
                         </a>
-
+                        <ul aria-expanded="false">
+                            <li><a href="<?= base_url(); ?>kategori">Kategori</a></li>
+                            <li><a href="<?= base_url(); ?>menu">Daftar Menu</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="<?= base_url(); ?>profil_user" class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="ti-user"></i> <span class="nav-text">Profil</span>
+                        <a href="<?= base_url(); ?>cafe_profil" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="ti-direction"></i> <span class="nav-text">Cafe Profil</span>
                         </a>
-
                     </li>
                 </ul>
             </div>

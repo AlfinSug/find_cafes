@@ -6,6 +6,6 @@ class User_Reserv extends CI_Controller
     {
         $data['title'] = 'User Reservation';
         $this->load->view('utils/header-server', $data);
-        $this->load->view('side_user/user-reserv');
+        $this->load->view('side_user/user_reserv');
     }
 }

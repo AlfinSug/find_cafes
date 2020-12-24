@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <span class="mb-4">
                         <div class="ml--5 header-left">
-                            <h3>Data Pembelian</h3>
+                            <h3>Daftar Reservation</h3>
                         </div>
                         <div class="header-right">
                             <div class="input-group icons">
@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-2" id="basic-addon1">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal"><i class="ti-plus mr-2"></i> Tambah Pembelian</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal"><i class="ti-plus mr-2"></i>Add Reservation</button>
                                     </span>
                                 </div>
                             </div>
@@ -34,55 +34,35 @@
                             <table class="table table-xs mb-0">
                                 <thead class="text-center mt-5">
                                     <tr>
-                                        <th>Perusahaan/CV</th>
-                                        <th>Jenis Pasir</th>
-                                        <th>Berat Pasir (Ton)</th>
-                                        <th>Harga Beli (Ton)</th>
-                                        <th>Total Harga Beli</th>
-                                        <th>Tanggal Pembelian</th>
-                                        <th>Bukti Pembelian</th>
-                                        <th colspan="2">Keterangan</th>
+                                        <th>Nama Cangkrukers</th>
+                                        <th>Nama Cafe</th>
+                                        <th>Total Biaya Reservasi</th>
+                                        <th>Jumlah Kursi</th>
+                                        <th>Tanggal Reservasi</th>
+                                        <th>Status Reservasi</th>
+                                        <th>Menu Pesanan</th>
+                                        <th>Bukti Pembayaran DP Reservasi</th>
+                                        <th colspan="2">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-center">
                                     <tr>
                                         <td>Alfin Sugestian</td>
-                                        <td>Silika</td>
-                                        <td>
-                                            <span>50 Ton</span>
-                                        </td>
-                                        <td>
-                                            Rp 25.000.000,-/ton
-                                        </td>
-                                        <td>Rp 50.000.000,-
-                                        <td>
-                                            Senin, 23 April 2020
-                                        </td>
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target=".detail-bukti-pembelian"><i class="ti-image mr-2"></i> Detail</button></td>
-                                        <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateModal"><i class="ti-pencil-alt mr-2"></i> Edit</button></td>
+                                        <td>Ada Apa Dengan Koffee</td>
+                                        <td>Rp 250.000,</td>
+                                        <td>5 Kursi
+                                        <td>Senin, 23 April 2020</td>
+                                        <td><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima</td>
+                                        <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-image mr-2"></i> Lihat Menu</button></td>
+                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
+                                        <td><button type="button" class="btn btn-success text-white" data-toggle="modal" data-target="#updateModal"><i class="ti-mobile mr-2"></i> Hubungi Owner</button></td>
                                         <td>
                                             <div class="sweetalert m-t-30">
-                                                <button class="btn btn-danger btn sweet-confirm"><i class="ti-trash"></i> Delete</button>
+                                                <button class="btn btn-danger btn sweet-confirm"><i class="ti-close mr-2"></i>Batal</button>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Alfin Sugestian</td>
-                                        <td>Silika</td>
-                                        <td>
-                                            <span>50 Ton</span>
-                                        </td>
-                                        <td>
-                                            Rp 25.000.000,-/ton
-                                        </td>
-                                        <td>Rp 50.000.000,-
-                                        <td>
-                                            Selasa, 24 April 2020
-                                        </td>
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target=".detail-bukti-pembelian"><i class="ti-image mr-2"></i> Detail</button></td>
-                                        <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateModal"><i class="ti-pencil-alt mr-2"></i> Edit</button></td>
-                                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".detail-bukti-pembelian"><i class="ti-trash mr-2"> Delete</button></td>
-                                    </tr>
+
 
                                 </tbody>
                             </table>
@@ -99,7 +79,7 @@
 </div>
 
 <!-- Modal Bukti Pembelian -->
-<div class="modal fade detail-bukti-pembelian" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade " id="detail-bukti-pembayaran" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -108,7 +88,47 @@
                 </button>
             </div>
             <div class="modal-body">
-                <img src="assets/images/media/media-1.png" type="application/pdf" width="100%" height="500px" />
+                <img src="quixlab/images/media/media-1.png" type="application/pdf" width="100%" height="500px" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Detail Kredit -->
+<div class="modal fade" id="detail-pesanan" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail Kredit</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+
+                    <div class="input-group mt-2">
+                        <img src="asset/logo_3.png" class="rounded mr-2" width="100" height="100" alt="">
+                        <div class="form-group">
+                            <h4 class="ml-2 mt-4 h4">Sekop</h4>
+                            <h6 class="ml-2 mt-2 h6">20 Item</h6>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4 class="ml-2 mt-4 h4">Kredit Ke</h4>
+                        <h6 class="ml-2 mt-2 h6">2 dari 24</h6>
+
+                    </div>
+                    <div class="form-group">
+                        <h4 class="ml-2 mt-4 h4">Biaya Kredit</h4>
+                        <h6 class="ml-2 mt-2 h6">Rp 1.500.000,-/bulan</h6>
+
+                    </div>
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
@@ -180,7 +200,7 @@
                     </div>
                     <div class="input-group form-group mt--5">
                         <div class="col-lg-12 mt-5  text-center">
-                            <img id="image-preview" src="assets/images/media/media-3.png" width="100%" height="250px" class="rounded">
+                            <img id="image-preview" src="quixlab/images/media/media-3.png" width="100%" height="250px" class="rounded">
                         </div>
                         <div class="float-left custom-file text-center mt--5 mr-3 ml-3">
                             <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="img_bukti" onchange="pickImage();">
@@ -261,7 +281,7 @@
                     </div>
                     <div class="input-group form-group mt--5">
                         <div class="col-lg-12 mt-5  text-center">
-                            <img id="image-preview" src="assets/images/media/media-3.png" width="100%" height="250px" class="rounded">
+                            <img id="image-preview" src="quixlab/images/media/media-3.png" width="100%" height="250px" class="rounded">
                         </div>
                         <div class="float-left custom-file text-center mt--5 mr-3 ml-3">
                             <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="img_bukti" onchange="pickImage();">
@@ -424,51 +444,51 @@
 <!--**********************************
         Scripts
     ***********************************-->
-<script src="assets/plugins/common/common.min.js"></script>
-<script src="assets/js/custom.min.js"></script>
-<script src="assets/js/settings.js"></script>
-<script src="assets/js/gleek.js"></script>
-<script src="assets/js/styleSwitcher.js"></script>
+<script src="quixlab/plugins/common/common.min.js"></script>
+<script src="quixlab/js/custom.min.js"></script>
+<script src="quixlab/js/settings.js"></script>
+<script src="quixlab/js/gleek.js"></script>
+<script src="quixlab/js/styleSwitcher.js"></script>
 
 <!-- Chartjs -->
-<script src="assets/plugins/chart.js/Chart.bundle.min.js"></script>
+<script src="quixlab/plugins/chart.js/Chart.bundle.min.js"></script>
 <!-- Circle progress -->
-<script src="assets/plugins/circle-progress/circle-progress.min.js"></script>
+<script src="quixlab/plugins/circle-progress/circle-progress.min.js"></script>
 <!-- Datamap -->
-<script src="assets/plugins/d3v3/index.js"></script>
-<script src="assets/plugins/topojson/topojson.min.js"></script>
-<script src="assets/plugins/datamaps/datamaps.world.min.js"></script>
+<script src="quixlab/plugins/d3v3/index.js"></script>
+<script src="quixlab/plugins/topojson/topojson.min.js"></script>
+<script src="quixlab/plugins/datamaps/datamaps.world.min.js"></script>
 <!-- Morrisjs -->
-<script src="assets/plugins/raphael/raphael.min.js"></script>
-<script src="assets/plugins/morris/morris.min.js"></script>
+<script src="quixlab/plugins/raphael/raphael.min.js"></script>
+<script src="quixlab/plugins/morris/morris.min.js"></script>
 <!-- Pignose Calender -->
-<script src="assets/plugins/moment/moment.min.js"></script>
-<script src="assets/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+<script src="quixlab/plugins/moment/moment.min.js"></script>
+<script src="quixlab/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
 <!-- ChartistJS -->
-<script src="assets/plugins/chartist/js/chartist.min.js"></script>
-<script src="assets/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+<script src="quixlab/plugins/chartist/js/chartist.min.js"></script>
+<script src="quixlab/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
 
 
-<script src="assets/js/dashboard/dashboard-1.js"></script>
+<script src="quixlab/js/dashboard/dashboard-1.js"></script>
 
-<script src="assets/plugins/moment/moment.js"></script>
-<script src="assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<script src="quixlab/plugins/moment/moment.js"></script>
+<script src="quixlab/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 <!-- Clock Plugin JavaScript -->
-<script src="assets/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+<script src="quixlab/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
 <!-- Color Picker Plugin JavaScript -->
-<script src="assets/plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
-<script src="assets/plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
-<script src="assets/plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+<script src="quixlab/plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+<script src="quixlab/plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+<script src="quixlab/plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
 <!-- Date Picker Plugin JavaScript -->
-<script src="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="quixlab/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <!-- Date range Plugin JavaScript -->
-<script src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-<script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="quixlab/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="quixlab/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-<script src="assets/js/plugins-init/form-pickers-init.js"></script>
-<script src="assets/plugins/sweetalert/js/sweetalert.min.js"></script>
-<script src="assets/plugins/sweetalert/js/sweetalert.init.js"></script>
+<script src="quixlab/js/plugins-init/form-pickers-init.js"></script>
+<script src="quixlab/plugins/sweetalert/js/sweetalert.min.js"></script>
+<script src="quixlab/plugins/sweetalert/js/sweetalert.init.js"></script>
 
 </body>
 
