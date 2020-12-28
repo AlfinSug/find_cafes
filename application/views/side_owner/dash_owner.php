@@ -55,7 +55,7 @@
                                             <th>Jumlah Kursi</th>
                                             <th>Tanggal Reservasi</th>
                                             <th>Status Reservasi</th>
-                                            <th>Menu Pesanan</th>
+                                            <!-- <th>Menu Pesanan</th> -->
                                             <th>Bukti Pembayaran DP Reservasi</th>
                                         </tr>
                                     </thead>
@@ -67,7 +67,7 @@
                                             <td>5 Kursi
                                             <td>Senin, 23 April 2020</td>
                                             <td><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima</td>
-                                            <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td>
+                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
                                             <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
 
                                         </tr>
@@ -78,7 +78,7 @@
                                             <td>3 Kursi
                                             <td>Senin, 23 April 2020</td>
                                             <td><i class="fa fa-circle-o text-warning mr-1"></i> <span class="mr-2">Proses</td>
-                                            <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td>
+                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
                                             <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
 
                                         </tr>
@@ -89,7 +89,7 @@
                                             <td>6 Kursi
                                             <td>Senin, 23 April 2020</td>
                                             <td><i class="fa fa-circle-o text-danger mr-1"></i> <span class="mr-2">Ditolak</td>
-                                            <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td>
+                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
                                             <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
 
                                         </tr>

@@ -34,8 +34,8 @@
                                         <th>Jumlah Kursi</th>
                                         <th>Tanggal Reservasi</th>
                                         <th>Status Reservasi</th>
-                                        <th>Menu Pesanan</th>
-                                        <th>Bukti Pembayaran DP Reservasi</th>
+                                        <!-- <th>Menu Pesanan</th> -->
+                                        <th>Detail Bukti Pembayaran</th>
                                         <th colspan="2">Action</th>
                                     </tr>
                                 </thead>
@@ -47,7 +47,7 @@
                                         <td>5 Kursi
                                         <td>Senin, 23 April 2020</td>
                                         <td><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima</td>
-                                        <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td>
+                                        <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
                                         <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
                                         <td><a href="tel:08974879215"><button type="button" class="btn btn-success text-white"><i class="ti-mobile mr-2"></i> Hubungi Owner</button></a></td>
                                         <td>
@@ -56,8 +56,6 @@
                                             </div>
                                         </td>
                                     </tr>
-
-
                                 </tbody>
                             </table>
                         </div>
@@ -92,56 +90,159 @@
 </div>
 
 <!-- Modal Detail Menu -->
-<div class="modal fade" id="detail-pesanan" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="detail-reservasi" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Detail Menu</h5>
+                <h5 class="modal-title">Detail Reservasi</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <div class="input-group mt-2">
-                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
+                    <div class="input-group">
                         <div class="form-group">
-                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
-                            <span class="ml-5 row">
-                                <h6 class="mt-2 h6">x 4</h6>
-                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-group mt-2">
-                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
-                        <div class="form-group">
-                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
-                            <span class="ml-5 row">
-                                <h6 class="mt-2 h6">x 4</h6>
-                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-group mt-2">
-                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
-                        <div class="form-group">
-                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
-                            <span class="ml-5 row">
-                                <h6 class="mt-2 h6">x 4</h6>
-                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-group mt-5">
-                        <div class="form-group">
+                            <h4 class=" h4">No. Reservasi</h4>
                             <span class="ml-3 row">
-                                <h3 class="mt-2 h3">Total</h3>
-                                <h3 class="float-right ml-5 mt-2 h3"><strong class="ml-5 text-success">Rp 60.000,-</strong> </h3>
+                                <h6 class="mt-2 h6">#R001</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-group">
+                            <h4 class=" h4">No. Meja</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Meja 1</h6>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-group ">
+
+                        <div class="form-group">
+                            <h4 class=" h4">Atas nama Cangkrukers</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Alfin Sugestian</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-2">
+
+                        <div class="form-group">
+                            <h4 class=" h4">Cafe Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Ada Apa Dengan Koffie</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group ">
+                        <div class="form-group">
+                            <h4 class=" h4">Total Biaya Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Rp 250.000,-</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group ">
+                        <div class="form-group">
+                            <h4 class=" h4">Jumlah Kursi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">5 Kursi</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-group">
+                            <h4 class=" h4">Tanggal Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Senin, 23 April 2021 16.00 WIB</h6>
                             </span>
                         </div>
                     </div>
 
 
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Detail Menu -->
+<div class="modal fade" id="detail-reservasi-tolak" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail Penolakan Reservasi</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="form-group">
+                            <h4 class=" h4">No. Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">#R001</h6>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group ">
+
+                        <div class="form-group">
+                            <h4 class=" h4">Atas nama Cangkrukers</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Alfin Sugestian</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-2">
+
+                        <div class="form-group">
+                            <h4 class=" h4">Cafe Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Ada Apa Dengan Koffie</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group ">
+                        <div class="form-group">
+                            <h4 class=" h4">Total Biaya Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Rp 250.000,-</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group ">
+                        <div class="form-group">
+                            <h4 class=" h4">Jumlah Kursi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">5 Kursi</h6>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-group">
+                            <h4 class=" h4">Tanggal Reservasi</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Senin, 23 April 2021 16.00 WIB</h6>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="form-group">
+                            <h4 class=" h4">Catatan Owner</h4>
+                            <span class="ml-3 row">
+                                <h6 class="mt-2 h6">Mohon maaf mas, untuk saat ini cafe ditutup dadakan dikarenakan ada kepentingan dari pihak cafe :)</h6>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

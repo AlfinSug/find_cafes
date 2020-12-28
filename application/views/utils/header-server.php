@@ -95,53 +95,37 @@
                     <ul class="clearfix">
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
                                 <i class="mdi mdi-bell-outline"></i>
-                                <span class="badge badge-pill gradient-2">3</span>
+                                <span class="badge badge-pill gradient-2">1</span>
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">2 New Notifications</span>
+                                    <span class="">Pemberitahuan</span>
                                     <a href="javascript:void()" class="d-inline-block">
-                                        <span class="badge badge-pill gradient-2">5</span>
+                                        <span class="badge badge-pill gradient-2">1</span>
                                     </a>
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                            <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi">
+                                                <span class="mr-3 avatar-icon bg-success"><i class="ti-face-smile"></i></span>
                                                 <div class="notification-content">
-                                                    <h6 class="notification-heading">Events near you</h6>
-                                                    <span class="notification-text">Within next 5 days</span>
+                                                    <h6 class="notification-heading">Reservasi Diterima</h6>
+                                                    <span class="notification-text">Silahkan buka untuk melihat detail reservasi</span>
                                                 </div>
                                             </a>
                                         </li>
+
                                         <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                            <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi-tolak">
+                                                <span class="mr-3 avatar-icon bg-danger"><i class="ti-face-sad"></i></span>
                                                 <div class="notification-content">
-                                                    <h6 class="notification-heading">Event Started</h6>
-                                                    <span class="notification-text">One hour ago</span>
+                                                    <h6 class="notification-heading">Reservasi Ditolak</h6>
+                                                    <span class="notification-text">Silahkan buka untuk melihat detail reservasi dan catatn dari owner</span>
                                                 </div>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="notification-heading">Event Ended Successfully</h6>
-                                                    <span class="notification-text">One hour ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="notification-heading">Events to Join</h6>
-                                                    <span class="notification-text">After two days</span>
-                                                </div>
-                                            </a>
-                                        </li>
+
                                     </ul>
 
                                 </div>
