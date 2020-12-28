@@ -1,3 +1,4 @@
+
 <div class="row mt-5 mr-3 ml-3 mb-5">
     <div class="col-12 m-b-30">
         <h4 class="d-inline">Selamat Datang, Alfin Sugestian</h4>
@@ -20,8 +21,8 @@
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -35,20 +36,19 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
-            <!-- End Col -->
             <div class="col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-header bg-white">
@@ -58,20 +58,19 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
-            <!-- End Col -->
             <div class="col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-header bg-white">
@@ -81,16 +80,16 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -105,16 +104,16 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -128,20 +127,19 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
-            <!-- End Col -->
             <div class="col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-header bg-white">
@@ -151,39 +149,38 @@
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow">Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
-            <!-- End Col -->
             <div class="col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-header bg-white">
                         <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-danger mr-1"></i> <span class="mr-2">Full</h6>
+                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
                     </div>
                     <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
                     <div class="card-body">
                         <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Sepanjang Oke</p>
+                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
+                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
                         </a>
-                        <a href="#" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik</p>
+                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
+                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
                         </a>
 
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-warning text-white" data-toggle="modal" data-target="#reservnow" disabled>Pesan Sekarang</button>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -218,29 +215,63 @@
             </div>
             <div class="modal-body">
                 <form action="#" method="POST">
-                    <div class="row align-items-center">
+                    <div class="row align-items-top">
                         <div class="col-md-4 col-lg-3">
                             <div class="nav flex-column nav-pills">
-                                <a href="#v-pills-order" data-toggle="pill" class="nav-link active show ">Pilih Pesanan</a>
-                                <a href="#v-pills-checkout" data-toggle="pill" class="nav-link">Proses Checkout</a>
-                                <a href="#v-pills-payment" data-toggle="pill" class="nav-link ">Pembayaran</a>
+                                <a href="#v-pills-checkout" data-toggle="pill" class="nav-link active show"><i class="ti-receipt mr-2"></i> Data Reservasi</a>
+                                <a href="#v-pills-payment" data-toggle="pill" class="nav-link "><i class="ti-credit-card mr-2"></i> Pembayaran</a>
                             </div>
                         </div>
                         <div class="col-md-8 col-lg-9">
                             <div class="tab-content">
-                                <div id="v-pills-order" class="tab-pane fade active show">
-                                    <!-- menu -->
-                                </div>
-                                <div id="v-pills-checkout" class="tab-pane fade">
+
+                                <div id="v-pills-checkout" class="tab-pane fade active show">
                                     <!-- informasi -->
+                                    <div class="input-group form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Atas Nama Pesanan</span></label>
+                                        <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                    </div>
+                                    <div class="input-group form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Waktu Reservasi</span></label>
+                                        <input type="text" id="date-format" class="form-control" placeholder="Saturday 24 June 2017 - 21:44">
+                                    </div>
+                                    <div class="input-group form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Jumlah Kursi</span></label>
+                                        <input type="number" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                    </div>
+                                    <div class="input-group form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Note</span></label>
+                                        <textarea type="text" class="form-control rounded" placeholder="Tambahkan catatan untuk cafe" rows="3" aria-label="Amount (to the nearest dollar)"></textarea>
+                                    </div>
                                 </div>
                                 <div id="v-pills-payment" class="tab-pane fade">
                                     <!-- upload Pembayaran -->
+                                    <div class="input-group form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Metode Pembayaran</span></label>
+                                        <div class="btn-group mb-2">
+                                            <button class="btn btn-warning text-white" type="button">Transfer Full</button>
+                                            <button class="btn btn-warning text-white" type="button">DP 50%</button>
+                                            <h4 class="h4 mt-2 ml-5"><span class=" ml-5"><strong class="ml-5">Rp 25.000,-</strong></span></h4>
+                                            <button class="btn btn-secondary text-white ml-5" type="button" data-toggle="modal" data-dismiss="modal" data-toggle="tooltip" data-target="#payGuide" title="Bank Virtual Account"><i class="ti-info-alt"></i></button>
+                                        </div>
+                                        <p class="ml-2 mt-2 text-muted">*) Silahkan klik icon info untuk melakukan pembayaran melalui bank virtual account.</p>
+                                    </div>
+                                    <div class="input-group form-group mt--5 mb-5">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Unggah Bukti Pembayaran</span>
+                                        </label>
+                                        <div class="col-lg-12 mt-2 text-center">
+                                            <img id="image-preview" src="quixlab/images/media/media-3.png" width="100%" height="500px" class="rounded">
+                                        </div>
+                                        <div class="custom-file text-center mr-5 ml-5" style="display: block; margin: -10% auto;">
+                                            <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="img_bukti" onchange="pickImage();">
+                                            <label class="btn btn-warning text-white col-form-label text-center btn-lg" for="customFileLang"><i class="ti-export"></i></label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer mt-3">
                         <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
                         <button type="button" class="btn btn-warning text-white">Pesan Sekarang</button>
                     </div>
@@ -249,6 +280,167 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Pay Guide -->
+<div class="modal fade" id="payGuide" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Bank Virtual Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#bca"><img width="" height="40" src="asset/logo_bank/bca.png" alt=""></span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bri"><img width="" height="40" src="asset/logo_bank/bri.png" alt=""></span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bni"><span><img width="" height="40" src="asset/logo_bank/bni.png" alt=""></span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mandiri"><span><img width="" height="40" src="asset/logo_bank/mandiri.png" alt=""></span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mandiri_syariah"><span><img width="" height="40" src="asset/logo_bank/mandiri_syariah.png" alt=""></span></a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabcontent-border">
+                    <div class="tab-pane fade show active" id="bca" role="tabpanel">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bank Central Asia</h5>
+                                    <div class="row mt-5" style="margin-left:30%;">
+                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">559889340500</h1>
+                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bri" role="tabpanel">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bank Rakyat Indonesia</h5>
+                                    <div class="row mt-5" style="margin-left:30%;">
+                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">778974578987</h1>
+                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bni" role="tabpanel">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bank Negara Indonesia</h5>
+                                    <div class="row mt-5" style="margin-left:30%;">
+                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">8775854400008</h1>
+                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="mandiri" role="tabpanel">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bank Mandiri</h5>
+                                    <div class="row mt-5" style="margin-left:30%;">
+                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">6674578988999</h1>
+                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="mandiri_syariah" role="tabpanel">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bank Mandiri Syariah</h5>
+                                    <div class="row mt-5" style="margin-left:30%;">
+                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">985678865434</h1>
+                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="messages8" role="tabpanel">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bank Central Asia</h5>
+                                    <div class="row mt-5" style="margin-left:30%;">
+                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">559889340500</h1>
+                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer mt-3">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal" data-toggle="modal" data-target="#reservNow">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    function pickImage() {
+        document.getElementById("image-preview").style.display = "block";
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("customFileLang").files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            document.getElementById("image-preview").src = oFREvent.target.result;
+        };
+    };
+</script>
 
 <!--**********************************
         Scripts
@@ -277,7 +469,7 @@
 <script src="quixlab/plugins/chartist/js/chartist.min.js"></script>
 <script src="quixlab/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-
+<script src="assets/js/func_copy.js"></script>
 
 <script src="quixlab/js/dashboard/dashboard-1.js"></script>
 

@@ -243,7 +243,7 @@
                         </a>
                     </li>
                     <li class="nav-label">Master</li>
-                    <li>
+                    <!-- <li>
                         <a href="#" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-clipboard"></i> <span class="nav-text">Menu</span>
                         </a>
@@ -251,7 +251,7 @@
                             <li><a href="<?= base_url(); ?>kategori">Kategori</a></li>
                             <li><a href="<?= base_url(); ?>menu">Daftar Menu</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="<?= base_url(); ?>cafe_profil" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-direction"></i> <span class="nav-text">Cafe Profil</span>

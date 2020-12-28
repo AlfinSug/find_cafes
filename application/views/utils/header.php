@@ -12,6 +12,30 @@
 
   <link rel="icon" href="asset/logo_3.ico">
   <title>Find Cafe - <?php echo $title ?></title>
+
+  <!-- Pignose Calender -->
+  <link href="quixlab/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+  <!-- themify icons -->
+  <link rel="stylesheet" href="quixlab/icons/themify-icons/themify-icons.css">
+  <!-- Chartist -->
+  <link rel="stylesheet" href="quixlab/plugins/chartist/css/chartist.min.css">
+  <link rel="stylesheet" href="quixlab/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+  <!-- Custom Stylesheet -->
+  <link href="quixlab/css/style.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link href="quixlab/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+  <!-- Page plugins css -->
+  <link href="quixlab/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+  <!-- Color picker plugins css -->
+  <link href="quixlab/plugins/jquery-asColorPicker-master/css/asColorPicker.css" rel="stylesheet">
+  <!-- Date picker plugins css -->
+  <link href="quixlab/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+  <!-- Daterange picker plugins css -->
+  <link href="quixlab/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+  <link href="quixlab/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+  <link href="quixlab/plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
+  <link rel="stylesheet" href="quixlab/icons/font-awesome/css/font-awesome.min.css">
+  <link href="quixlab/plugins/jquery-steps/css/jquery.steps.css" rel="stylesheet">
   <!--
     
 TemplateMo 558 Klassy Cafe
@@ -46,7 +70,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+  <header class="header-area header-sticky mb-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
