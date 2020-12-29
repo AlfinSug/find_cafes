@@ -1,7 +1,6 @@
-
 <div class="row mt-5 mr-3 ml-3 mb-5">
     <div class="col-12 m-b-30">
-        <h4 class="d-inline">Selamat Datang, Alfin Sugestian</h4>
+        <h4 class="d-inline">Selamat Datang, <?= $this->session->userdata('nama_user'); ?></h4>
         <p class="text-muted">Pilih cafe atau warkop favoritmu sekarang!</p>
         <div class="row">
             <div class="col-md-6 col-lg-3">

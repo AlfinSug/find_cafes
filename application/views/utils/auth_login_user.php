@@ -14,6 +14,14 @@
         Preloader end
     ********************-->
 
+    <!-- <?php
+            $success = $this->session->flashdata('success');
+
+            if (!empty($success)) {
+                echo $success;
+            }
+            ?> -->
+
     <div class="login-form-bg h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100">
@@ -28,13 +36,13 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="#" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_loginuser/login_user" method="post">
 
                                     <div class="form-group">
                                         <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Whatsapp Number <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-phoneus" name="val-phoneus" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-phoneus" name="notelp_user" placeholder="">
                                         </div>
                                     </div>
 
@@ -42,11 +50,11 @@
                                         <label class="col-lg-12 col-form-label text-left" for="val-password">Password <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="password" class="form-control rounded" id="val-password" name="val-password" placeholder="">
+                                            <input type="password" class="form-control rounded" id="val-password" name="pass_user" placeholder="">
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-lg w-100 text-white mt-5 btn-warning rounded">Sign In</button>
+                                    <button type="submit" class="btn btn-lg w-100 text-white mt-5 btn-warning rounded">Sign In</button>
                                 </form>
                                 <p class="mt-5 login-form__footer">Don't have an account yet? <a href="<?= base_url(); ?>auth_createuser" class="text-primary">Create Account</a>
                             </div>

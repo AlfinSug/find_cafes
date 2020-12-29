@@ -3,7 +3,7 @@
             <div class="col-lg-6 col-xl-4">
                 <div class="card">
                     <div class="card-body">
-                        <img class="mr-3 rounded" src="asset/banner_cafe/kofibrik_banner.jpg" width="100%" height="350" alt="">
+                        <img class="mr-3 rounded" src="asset/pictures.png" width="100%" height="350" alt="">
                         <div class="media align-items-center mb-4">
                             <div class="media-body text-center mt-3">
                                 <h3 class="mb-0">Kofibrik</h3>
@@ -66,7 +66,18 @@
                     <div class="card-body">
                         <h3 class="mb-4">Edit Profil Cafe</h3>
                         <form action="#" class="form-profile">
-                            <div class="input-group form-group">
+
+                            <div class="input-group form-group mt--5 col-lg-6 text-center" style="margin: auto;">
+                                <div class="col-lg-12   text-center">
+                                    <img id="banner-preview" src="asset/pictures.png" width="100%" height="350px" class="rounded">
+                                </div>
+                                <div class="float-left custom-file text-center mt--5 mr-3 ml-3">
+                                    <input type="file" class="custom-file-input" id="customFileBanner" lang="en" name="img_bukti" onchange="pickBanner();">
+                                    <label class="btn btn-info col-lg-12 col-form-label text-center btn-lg" for="customFileBanner"><i class="ti-export mr-2"></i>Unggah Banner Cafe</label>
+                                </div>
+                            </div>
+
+                            <div class="input-group form-group mt-5">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Cafe</span>
                                 </label>
                                 <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
@@ -130,6 +141,28 @@
     </div>
     <!-- #/ container -->
 
+    <script>
+        function pickLogo() {
+            document.getElementById("logo-preview").style.display = "block";
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("customFileLogo").files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                document.getElementById("logo-preview").src = oFREvent.target.result;
+            };
+        };
+
+        function pickBanner() {
+            document.getElementById("banner-preview").style.display = "block";
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("customFileBanner").files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                document.getElementById("banner-preview").src = oFREvent.target.result;
+            };
+        };
+    </script>
+
     <!-- Modal Update Password-->
     <div class="modal fade" id="updatePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -170,6 +203,7 @@
             </div>
         </div>
     </div>
+
 
     <!--**********************************
             Scripts

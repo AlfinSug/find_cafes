@@ -28,19 +28,20 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="#" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_createuser/create_acc" method="post">
+                                    <input class="form-control" name="id_user" placeholder="ID Pegawai" type="text" hidden>
                                     <div class="form-group">
                                         <label class="col-lg-12 col-form-label text-left" for="val-username">Fullname<span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-username" name="val-username" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-username" name="nama_user" placeholder="">
                                         </div>
                                     </div>
                                     <div class="form-group ">
                                         <label class="col-lg-12 col-form-label text-left" for="val-email">Email <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-email" name="val-email" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-email" name="email_user" placeholder="">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -48,10 +49,10 @@
                                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Gender <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-12">
-                                                <select class="form-control rounded" id="val-skill" name="val-skill">
-                                                    <option value="">- Choose Gender -</option>
-                                                    <option value="html">Male</option>
-                                                    <option value="css">Female</option>
+                                                <select class="form-control rounded" id="val-skill" name="jenis_kel">
+                                                    <option value="0">- Choose Gender -</option>
+                                                    <option value="L">Male</option>
+                                                    <option value="P">Female</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -61,7 +62,7 @@
                                         <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Whatsapp Number <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-phoneus" name="val-phoneus" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-phoneus" name="notelp_user" placeholder="">
                                         </div>
                                     </div>
 
@@ -69,29 +70,25 @@
                                         <label class="col-lg-12 col-form-label text-left" for="">Birthdate <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate">
+                                            <input type="text" class="form-control" placeholder="2017-06-04" id="mdate" name="tgl_lahir">
 
                                         </div>
                                     </div>
-
-                                    <div class="row">
-
-                                        <div class="form-group col-lg-6">
-                                            <label class="col-lg-12 col-form-label text-left" for="val-password">Password <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-12">
-                                                <input type="password" class="form-control rounded" id="val-password" name="val-password" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-6">
-                                            <label class="col-lg-12 col-form-label text-left" for="val-confirm-password">Confirm Password <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-12">
-                                                <input type="password" class="form-control rounded" id="val-confirm-password" name="val-confirm-password" placeholder="">
-                                            </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-password">Alamat <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="col-lg-12">
+                                            <textarea type="text" class="form-control rounded" id="val-password" name="alamat_user" placeholder="" rows="5"></textarea>
                                         </div>
                                     </div>
-                                    <button class="btn btn-lg btn-warning text-white w-100 mt-5 rounded">Create Account</button>
+                                    <div class="form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-password">Password <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="col-lg-12">
+                                            <input type="password" class="form-control rounded" id="val-password" name="pass_user" placeholder="">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-lg btn-warning text-white w-100 mt-5 rounded">Create Account</button>
                                 </form>
                                 <p class="mt-5 login-form__footer">Already have an account? <a href="<?= base_url(); ?>auth_loginuser" class="text-primary">Login Now</a>
                             </div>

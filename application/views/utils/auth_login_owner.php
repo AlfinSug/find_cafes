@@ -28,13 +28,13 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="#" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_loginowner/login_owner" method="post">
 
                                     <div class="form-group">
                                         <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Email Cafe<span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="email" class="form-control rounded" id="val-email" name="val-email" placeholder="abc@gmail.com">
+                                            <input type="email" class="form-control rounded" id="val-email" name="email_cafe" placeholder="abc@gmail.com">
                                         </div>
                                     </div>
 
@@ -42,11 +42,11 @@
                                         <label class="col-lg-12 col-form-label text-left" for="val-password">Password <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="password" class="form-control rounded" id="val-password" name="val-password" placeholder="">
+                                            <input type="password" class="form-control rounded" id="val-password" name="pass_cafe" placeholder="">
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-lg w-100 text-white mt-5 btn-warning rounded">Sign In</button>
+                                    <button type="submit" class="btn btn-lg w-100 text-white mt-5 btn-warning rounded">Sign In</button>
                                 </form>
                                 <p class="mt-5 login-form__footer">Don't have an account yet? <a href="<?= base_url(); ?>auth_create_user" class="text-primary">Create Account</a>
                             </div>

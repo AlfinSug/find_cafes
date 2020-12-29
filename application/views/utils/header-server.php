@@ -152,7 +152,8 @@
 
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="asset/alfin.png" height="40" width="40" alt="">
+                                
+                                <img src="assets/images/icon-user.png" height="50" width="100%" alt="">
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -161,7 +162,7 @@
                                             <a href="<?= base_url(); ?>profil_user"><i class="icon-user"></i> <span>Profil Saya</span></a>
                                         </li>
 
-                                        <li><a href="page-login.html"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
+                                        <li><a href="<?= base_url(); ?>auth_loginuser/logout_user"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
                                     </ul>
                                 </div>
                             </div>

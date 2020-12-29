@@ -28,70 +28,49 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="#" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_createowner/create_acc_owner" method="post">
+                                    <input class="form-control" name="id_cafe" placeholder="ID Pegawai" type="text" hidden>
                                     <div class="form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-username">Cafe Name<span class="text-danger">*</span>
+                                        <label class="col-lg-12 col-form-label text-left" for="val-username">Nama Cafe<span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-username" name="val-username" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-username" name="nama_cafe" placeholder="">
                                         </div>
                                     </div>
                                     <div class="form-group ">
                                         <label class="col-lg-12 col-form-label text-left" for="val-email">Email Cafe<span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-email" name="val-email" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-email" name="email_cafe" placeholder="">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-12">
-                                            <label class="col-lg-12 col-form-label text-left" for="val-skill">Gender <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-12">
-                                                <select class="form-control rounded" id="val-skill" name="val-skill">
-                                                    <option value="">- Choose Gender -</option>
-                                                    <option value="html">Male</option>
-                                                    <option value="css">Female</option>
-                                                </select>
-                                            </div>
-                                        </div>
 
-                                    </div>
                                     <div class="form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Phone Number Cafe<span class="text-danger">*</span>
+                                        <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Nomor Telepon Cafe<span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-12">
-                                            <input type="text" class="form-control rounded" id="val-phoneus" name="val-phoneus" placeholder="">
+                                            <input type="text" class="form-control rounded" id="val-phoneus" name="notelp_cafe" placeholder="">
                                         </div>
                                     </div>
 
                                     <div class="form-group ">
-                                        <label class="col-lg-12 col-form-label text-left" for="">Address Cafe <span class="text-danger">*</span>
+                                        <label class="col-lg-12 col-form-label text-left" for="">Alamat Cafe <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <textarea type="text" class="form-control" placeholder="" rows="5"></textarea>
+                                            <textarea type="text" class="form-control" placeholder="" rows="5" name="alamat_cafe"></textarea>
 
                                         </div>
                                     </div>
 
-                                    <div class="row">
-
-                                        <div class="form-group col-lg-6">
-                                            <label class="col-lg-12 col-form-label text-left" for="val-password">Password <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-12">
-                                                <input type="password" class="form-control rounded" id="val-password" name="val-password" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-6">
-                                            <label class="col-lg-12 col-form-label text-left" for="val-confirm-password">Confirm Password <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-12">
-                                                <input type="password" class="form-control rounded" id="val-confirm-password" name="val-confirm-password" placeholder="">
-                                            </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-12 col-form-label text-left" for="val-password">Password <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="col-lg-12">
+                                            <input type="password" class="form-control rounded" id="val-password" name="pass_cafe" placeholder="">
                                         </div>
                                     </div>
-                                    <button class="btn btn-lg btn-warning text-white w-100 mt-5 rounded">Create Account</button>
+
+                                    <button type="submit" class="btn btn-lg btn-warning text-white w-100 mt-5 rounded">Create Account</button>
                                 </form>
                                 <p class="mt-5 login-form__footer">Already have an account? <a href="<?= base_url(); ?>auth_loginuser" class="text-primary">Login Now</a>
                             </div>

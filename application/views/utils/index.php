@@ -94,101 +94,38 @@
       <div class="col-lg-8">
         <div class="section-heading">
           <a class="view-btn" href="<?= base_url(); ?>catalog">View All</a>
-
         </div>
       </div>
     </div>
   </div>
-  <div class="menu-item-carousel">
-    <div class="col-lg-12">
-      <div class="owl-menu-item owl-carousel">
-        <div class="item">
-          <div class='card card1'>
-            <div class="price">
-              <i class="fas fa-store"></i>
-              <h6>08.00 - 10.00</h6>
-            </div>
-            <div class='info'>
-              <h1 class='title'>Ada Apa Dengan Coffee</h1>
-              <p class='description'>Jl. Tegal Sari 10</p>
-              <div class="main-text-button">
-                <div class="scroll-to-section"><a href="<?= base_url(); ?>auth_login">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
+  <div class="row mb-3 ml-3 mr-3">
+    <?php foreach ($cafe_list as $row) { ?>
+      <div class="mt-5 mb-5 col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-header bg-white">
+            <h5 class="card-title mt-2"><?= $row['nama_cafe']; ?></h5>
+            <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
           </div>
-        </div>
-        <div class="item">
-          <div class='card card2'>
-            <div class="price">
-              <h6>$22</h6>
-            </div>
-            <div class='info'>
-              <h1 class='title'>Klassy Pancake</h1>
-              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-              <div class="main-text-button">
-                <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
+          <img class="img-fluid" src="<?= $row['banner_cafe']; ?>" alt="">
+          <div class="card-body">
+            <p class="card-text"><i class="ti-time mr-2"></i><?= $row['jam_buka']; ?></p>
+            <a href="<?= $row['url_maps']; ?>">
+              <p class="card-text"><i class="ti-pin mr-2"></i><?= $row['alamat_cafe']; ?></p>
+            </a>
+            <a href="https://www.instagram.com/<?= $row['sosmed']; ?>/?hl=en" class="mt-2">
+              <p class="card-text mt-3"><i class="ti-instagram mr-2"></i><?= $row['sosmed']; ?></p>
+            </a>
+
           </div>
-        </div>
-        <div class="item">
-          <div class='card card3'>
-            <div class="price">
-              <h6>$18</h6>
-            </div>
-            <div class='info'>
-              <h1 class='title'>Tall Klassy Bread</h1>
-              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-              <div class="main-text-button">
-                <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class='card card4'>
-            <div class="price">
-              <h6>$10</h6>
-            </div>
-            <div class='info'>
-              <h1 class='title'>Blueberry CheeseCake</h1>
-              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-              <div class="main-text-button">
-                <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class='card card5'>
-            <div class="price">
-              <h6>$8.50</h6>
-            </div>
-            <div class='info'>
-              <h1 class='title'>Klassy Cup Cake</h1>
-              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-              <div class="main-text-button">
-                <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class='card card3'>
-            <div class="price">
-              <h6>$7.25</h6>
-            </div>
-            <div class='info'>
-              <h1 class='title'>Klassic Cake</h1>
-              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-              <div class="main-text-button">
-                <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
+          <div class="card-footer text-center">
+            <a href="<?= base_url(); ?>auth_loginuser">
+              <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    <?php } ?>
+    <!-- End Col -->
   </div>
 </section>
 <!-- ***** Menu Area Ends ***** -->
@@ -230,16 +167,7 @@
                 <span><a href="https://www.instagram.com/alfin_studio/">find.cafes</a>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="message">
-                <i class="fa fa-mobile"></i>
-                <h4>Android Apps</h4>
-                <span><br>
-                  <div class="main-brown-button scroll-to-section">
-                    <a href="#">Download Now</a>
-                  </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

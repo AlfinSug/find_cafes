@@ -210,7 +210,7 @@
                                             <a href="<?= base_url(); ?>profil_user"><i class="icon-user"></i> <span>Profil Cafe</span></a>
                                         </li>
 
-                                        <li><a href="page-login.html"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
+                                        <li><a href="<?= base_url(); ?>auth_loginowner/logout_owner"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
                                     </ul>
                                 </div>
                             </div>

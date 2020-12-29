@@ -5,7 +5,7 @@
 
     <div class="container-fluid mt-3">
 
-        <h3>Selamat Datang, <strong>Ada Apa Dengan Koffie</strong> </h3>
+        <h3>Selamat Datang, <strong><?= $this->session->userdata('nama_cafe'); ?></strong> </h3>
 
         <div class="row mt-5">
             <div class="col-6">

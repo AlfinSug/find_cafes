@@ -129,7 +129,7 @@
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Main</li>
                     <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-share-alt"></i><span class="nav-text">Back to Home</span>
                         </a>
 

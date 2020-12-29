@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="icon" href="asset/logo_3.ico">
-  <title>Find Cafe - Cafe Catalog</title>
+  <title>Find Cafe - <?= $title; ?></title>
 
   <!-- Pignose Calender -->
   <link href="quixlab/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
@@ -123,187 +123,35 @@ https://templatemo.com/tm-558-klassy-cafe
     <div class="row  mr-3 ml-3 mb-5">
       <div class="col-12 m-b-30 mt-5">
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
+        <div class="row mt-5 mb-5">
+          <?php foreach ($cafe_catalog as $row) { ?>
+            <div class="mt-5 mb-5 col-md-6 col-lg-3">
+              <div class="card">
+                <div class="card-header bg-white">
+                  <h5 class="card-title mt-2"><?= $row['nama_cafe']; ?></h5>
+                  <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
+                </div>
+                <img class="img-fluid" src="<?= $row['banner_cafe']; ?>" alt="">
+                <div class="card-body">
+                  <p class="card-text"><i class="ti-time mr-2"></i><?= $row['jam_buka']; ?></p>
+                  <a href="<?= $row['url_maps']; ?>">
+                    <p class="card-text"><i class="ti-pin mr-2"></i><?= $row['alamat_cafe']; ?></p>
+                  </a>
+                  <a href="https://www.instagram.com/<?= $row['sosmed']; ?>/?hl=en" class="mt-2">
+                    <p class="card-text mt-3"><i class="ti-instagram mr-2"></i><?= $row['sosmed']; ?></p>
+                  </a>
 
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="<?= base_url(); ?>auth_loginuser">
+                    <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          <?php } ?>
           <!-- End Col -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
 
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
-
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
-
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
-
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
-          <!-- End Col -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
-
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
-
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card">
-              <div class="card-header bg-white">
-                <h5 class="card-title mt-2">Kofibrik</h5>
-                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-              </div>
-              <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-              <div class="card-body">
-                <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                  <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                </a>
-                <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                  <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                </a>
-
-              </div>
-              <div class="card-footer text-center">
-                <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

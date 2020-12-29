@@ -27,6 +27,11 @@
     </div>
 </footer>
 
+<script src="quixlab/plugins/common/common.min.js"></script>
+<script src="quixlab/js/custom.min.js"></script>
+<script src="quixlab/js/settings.js"></script>
+<script src="quixlab/js/gleek.js"></script>
+<script src="quixlab/js/styleSwitcher.js"></script>
 <!-- jQuery -->
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -67,6 +72,8 @@
 <script src="vendor_form/js/jquery-3.3.1.min.js"></script>
 <script src="vendor_form/js/jquery.steps.js"></script>
 <script src="vendor_form/js/main.js"></script>
+
+
 </body>
 
 </html>
