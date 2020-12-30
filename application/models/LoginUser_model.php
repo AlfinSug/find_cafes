@@ -17,9 +17,12 @@ class LoginUser_model extends CI_Model
             foreach ($query->result() as $row) {
                 $data = array(
                     'id_user' => $row->id_user,
+                    'nama_user' => $row->nama_user,
                     'notelp_user' => $row->notelp_user,
                     'pass_user' => $row->pass_user,
-                    'nama_user' => $row->nama_user
+                    'email_user' => $row->email_user,
+                    'bio' => $row->bio,
+                    'alamat_user' => $row->alamat_user,
                 );
             }
 

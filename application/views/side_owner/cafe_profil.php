@@ -6,8 +6,8 @@
                         <img class="mr-3 rounded" src="asset/pictures.png" width="100%" height="350" alt="">
                         <div class="media align-items-center mb-4">
                             <div class="media-body text-center mt-3">
-                                <h3 class="mb-0">Kofibrik</h3>
-                                <p class="text-muted mb-0">tes@kofibrik.id</p>
+                                <h3 class="mb-0"><?= $this->session->userdata('nama_cafe'); ?></h3>
+                                <p class="text-muted mb-0"><?= $this->session->userdata('email_cafe'); ?></p>
                             </div>
                         </div>
 
@@ -38,21 +38,21 @@
                         </div>
                         <ul class="card-profile__info text-center">
                             <li class="mb-1"><strong class="text-dark ">Jam Buka</strong>
-                                <div>Setiap Hari 06.00 - 22.00 WIB </div>
+                                <div><?= $this->session->userdata('jam_buka'); ?></div>
                             </li>
                             <li class="mb-1"><strong class="text-dark ">Phone Number</strong>
                                 <a href="">
-                                    <div>+62 8974879215</div>
+                                    <div><?= $this->session->userdata('notelp_cafe'); ?></div>
                                 </a>
                             </li>
                             <li class="mb-1"><strong class="text-dark ">Instagram</strong>
-                                <a href="">
-                                    <div>kofibrik_ngindensemolo</div>
+                                <a href="https://www.instagram.com/<?= $this->session->userdata['sosmed']; ?>/">
+                                    <div><?= $this->session->userdata['sosmed']; ?></div>
                                 </a>
                             </li>
                             <li><strong class="text-dark">Alamat</strong>
-                                <a href="">
-                                    <div>Jl. Nginden Semolo No.78, Ngenden Jangkungan,</div>
+                                <a href="<?= $this->session->userdata['url_maps']; ?>">
+                                    <div><?= $this->session->userdata['alamat_cafe']; ?></div>
                                 </a>
                             </li>
 

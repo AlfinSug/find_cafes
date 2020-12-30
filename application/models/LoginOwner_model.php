@@ -18,7 +18,15 @@ class LoginOwner_model extends CI_Model
                     'id_cafe' => $row->id_cafe,
                     'nama_cafe' => $row->nama_cafe,
                     'email_cafe' => $row->email_cafe,
-                    'pass_cafe' => $row->pass_cafe
+                    'pass_cafe' => $row->pass_cafe,
+                    'img_cafe' => $row->img_cafe,
+                    'notelp_cafe' => $row->notelp_cafe,
+                    'alamat_cafe' => $row->alamat_cafe,
+                    'banner_cafe' => $row->banner_cafe,
+                    'jam_buka' => $row->jam_buka,
+                    'jumlah_meja' => $row->jumlah_meja,
+                    'url_maps' => $row->url_maps,
+                    'sosmed' => $row->sosmed,
                 );
             }
 

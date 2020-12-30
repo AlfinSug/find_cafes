@@ -4,10 +4,10 @@
             <div class="card">
                 <div class="card-body">
                     <div class="media align-items-center mb-4">
-                        <img class="mr-3 rounded-circle" src="asset/alfin.png" width="80" height="80" alt="">
+                        <img class="mr-3 rounded-circle" src="assets/images/icon-user.png" width="80" height="80" alt="">
                         <div class="media-body">
-                            <h3 class="mb-0">Alfin Sugestian</h3>
-                            <p class="text-muted mb-0">alfinsugestian99@gmail.com</p>
+                            <h3 class="mb-0"><?= $this->session->userdata('nama_user'); ?></h3>
+                            <p class="text-muted mb-0"><?= $this->session->userdata('email_user'); ?></p>
                         </div>
                     </div>
 
@@ -30,13 +30,13 @@
                     </div>
 
                     <h4 class="text-center">Bio</h4>
-                    <p class="text-muted text-center">Cangkruklah sebelum cangkruk itu dilarang hehe..</p>
+                    <p class="text-muted text-center"><?= $this->session->userdata('bio'); ?></p>
                     <ul class="card-profile__info text-center">
                         <li class="mb-1"><strong class="text-dark ">Whatsapp Number</strong>
-                            <div>+62 8974879215</div>
+                            <div><?= $this->session->userdata('notelp_user'); ?></div>
                         </li>
                         <li><strong class="text-dark">Alamat</strong>
-                            <div>Bulak Banteng</div>
+                            <div><?= $this->session->userdata('alamat_user'); ?></div>
                         </li>
 
                     </ul>
@@ -48,11 +48,21 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="mb-4">Edit Profil</h3>
-                    <form action="#" class="form-profile">
+                    <form action="<?= base_url(); ?>profil_user/edit_profil" class="form-profile text-center" method="post" enctype="multipart/form-data">
+                        <input type="text" class="form-control rounded" placeholder="" name="id_user" value="<?= $this->session->userdata('id_user'); ?>" readonly>
+                        <div class="input-group form-group mt--4 text-center">
+                            <div class="col-lg-12 mt-5 text-center" style="display: block; margin: -2% auto 2% auto;">
+                                <img id="ava-preview" src="assets/images/icon-user.png" width="18%" height="200" class="rounded-circle">
+                            </div>
+                            <div class="custom-file col-lg-12 text-center" style="display: block; margin: -2% auto 2% auto;">
+                                <input type="file" class="custom-file-input" id="customFileAva" lang="en" name="img_user" onchange="pickAva();">
+                                <label class="btn btn-info col-lg-2 text-center btn-lg" for="customFileAva"><i class="ti-camera"></i></label>
+                            </div>
+                        </div>
                         <div class="input-group form-group">
                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Lengkap</span>
                             </label>
-                            <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control rounded" placeholder="" name="nama_user" aria-label="Amount (to the nearest dollar)" value="<?= $this->session->userdata('nama_user'); ?>">
                             <div class="input-group-append">
                                 <span class="input-group-text text-warning"><i class="ti-bookmark"></i></span>
                             </div>
@@ -60,7 +70,7 @@
                         <div class="input-group form-group">
                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Email</span>
                             </label>
-                            <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control rounded" placeholder="" name="email_user" aria-label="Amount (to the nearest dollar)" value="<?= $this->session->userdata('email_user'); ?>">
                             <div class="input-group-append">
                                 <span class="input-group-text text-warning"><i class="ti-email"></i></span>
                             </div>
@@ -68,7 +78,7 @@
                         <div class="input-group form-group">
                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Whatsapp Number</span>
                             </label>
-                            <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)" name="notelp_user" value="<?= $this->session->userdata('notelp_user'); ?>">
                             <div class="input-group-append">
                                 <span class="input-group-text text-warning"><i class="ti-mobile"></i></span>
                             </div>
@@ -76,16 +86,15 @@
                         <div class="input-group form-group">
                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Alamat</span>
                             </label>
-                            <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="4" placeholder="Address Cafe"></textarea>
+                            <textarea class="form-control" id="textarea" cols="30" rows="4" placeholder="Address Cafe" name="alamat_user"><?= $this->session->userdata('alamat_user'); ?></textarea>
                         </div>
                         <div class="input-group form-group">
                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Bio</span>
                             </label>
-                            <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="4" placeholder="Post a new message"></textarea>
+                            <textarea class="form-control" id="textarea" cols="30" rows="4" name="bio" placeholder="Post a new message"><?= $this->session->userdata('bio'); ?></textarea>
                         </div>
                         <div class="input-group">
-
-                            <button class="btn btn-warning text-white btn-lg mt-2" style="display: block; margin: auto;">Simpan</button>
+                            <button type="submit" class="btn btn-warning text-white btn-lg mt-2" style="display: block; margin: auto;">Simpan</button>
                         </div>
                     </form>
                 </div>
@@ -96,6 +105,7 @@
     </div>
 </div>
 <!-- #/ container -->
+
 
 
 
@@ -139,6 +149,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    function pickAva() {
+        document.getElementById("ava-preview").style.display = "block";
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("customFileAva").files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            document.getElementById("ava-preview").src = oFREvent.target.result;
+        };
+    };
+</script>
 <!--**********************************
         Scripts
     ***********************************-->

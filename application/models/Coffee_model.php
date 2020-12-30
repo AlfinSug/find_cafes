@@ -12,7 +12,8 @@ class Coffee_model extends CI_Model
     {
         $gambar = $_FILES['gambar']['name'];
 
-        if ($gambar == "") { } else {
+        if ($gambar == "") {
+        } else {
             $config['upload_path'] = './asset/gambar_kopi';
             $config['allowed_types'] = 'jpg|png';
 
@@ -41,7 +42,6 @@ class Coffee_model extends CI_Model
 
     public function updateCoffee($data, $id_kopi)
     {
-
         $this->db->where('id_kopi', $id_kopi);
         $this->db->update('kopi', $data);
         return TRUE;

@@ -2,189 +2,120 @@
     <div class="col-12 m-b-30">
         <h4 class="d-inline">Selamat Datang, <?= $this->session->userdata('nama_user'); ?></h4>
         <p class="text-muted">Pilih cafe atau warkop favoritmu sekarang!</p>
-        <div class="row">
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
+        <div class="row mt-5 mb-5">
+            <?php foreach ($cafe_catalog as $row) { ?>
+                <div class="mt-2 mb-2 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mt-2"><?= $row['nama_cafe']; ?></h5>
+                            <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
+                        </div>
+                        <img class="img-fluid" src="<?= $row['banner_cafe']; ?>" alt="">
+                        <div class="card-body">
+                            <p class="card-text"><i class="ti-time mr-2"></i><?= $row['jam_buka']; ?></p>
+                            <a href="<?= $row['url_maps']; ?>">
+                                <p class="card-text"><i class="ti-pin mr-2"></i><?= $row['alamat_cafe']; ?></p>
+                            </a>
+                            <a href="https://www.instagram.com/<?= $row['sosmed']; ?>/?hl=en" class="mt-2">
+                                <p class="card-text mt-3"><i class="ti-instagram mr-2"></i><?= $row['sosmed']; ?></p>
+                            </a>
 
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#">
+                                <button type="button" class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow<?= $row['id_cafe']; ?>">Pesan Sekarang</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Modal Tambah -->
+                <div class="modal fade" id="reservNow<?= $row['id_cafe']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title" id="exampleModalLabel">Reservasi <?= $row['nama_cafe']; ?></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="<?= base_url(); ?>get_cafe/reserv_now" method="post" enctype="multipart/form-data">
+                                    <input type="text" class="form-control rounded" placeholder="" name="id_reserv" hidden>
+                                    <input type="text" class="form-control rounded" placeholder="" name="id_user" value="<?= $this->session->userdata['id_user']; ?>" hidden>
+                                    <input type="text" class="form-control rounded" placeholder="" name="id_cafe" value="<?= $row['id_cafe']; ?>" hidden>
+                                    <div class="row align-items-top">
+                                        <div class="col-md-4 col-lg-3">
+                                            <div class="nav flex-column nav-pills">
+                                                <a href="#v-pills-checkout" data-toggle="pill" class="nav-link active show"><i class="ti-receipt mr-2"></i> Data Reservasi</a>
+                                                <a href="#v-pills-payment" data-toggle="pill" class="nav-link "><i class="ti-credit-card mr-2"></i> Pembayaran</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-lg-9">
+                                            <div class="tab-content">
+
+                                                <div id="v-pills-checkout" class="tab-pane fade active show">
+                                                    <!-- informasi -->
+                                                    <div class="input-group form-group">
+                                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Atas Nama Pesanan</span></label>
+                                                        <input type="text" class="form-control rounded" placeholder="" name="nama_user" value="<?= $this->session->userdata['nama_user']; ?>" readonly>
+                                                    </div>
+                                                    <div class="input-group form-group">
+                                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Waktu Reservasi</span></label>
+                                                        <input type="text" id="date-format" class="form-control" name="tgl_reserv" placeholder="Saturday 24 June 2017 - 21:44">
+                                                    </div>
+                                                    <div class="input-group form-group">
+                                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Jumlah Kursi</span></label>
+                                                        <input type="number" class="form-control rounded" placeholder="" name="jumlah_kursi" aria-label="Amount (to the nearest dollar)">
+                                                    </div>
+                                                    <div class="input-group form-group">
+                                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Note</span></label>
+                                                        <textarea type="text" class="form-control rounded" name="note_reserv" placeholder="Tambahkan catatan untuk cafe" rows="3" aria-label="Amount (to the nearest dollar)"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div id="v-pills-payment" class="tab-pane fade">
+                                                    <!-- upload Pembayaran -->
+                                                    <div class="input-group form-group">
+                                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Biaya Komitmen Reservasi</span></label>
+                                                        <div class="btn-group mb-2">
+                                                            <h4 class="h4 mt-2"><span class="ml-5"><strong class="">Rp 15.000,-</strong></span></h4>
+                                                            <button class="btn btn-secondary text-white ml-5" type="button" data-toggle="modal" data-dismiss="modal" data-toggle="tooltip" data-target="#payGuide" title="Bank Virtual Account"><i class="ti-info-alt"></i></button>
+                                                        </div>
+                                                        <p class="ml-2 mt-2 text-muted">*) Untuk mengamankan slot meja yang telah dipesan, kamu hanya perlu melakukan commitment fee sebesar Rp 15.000,-/Reservasi dan akan dikembalikan 100% oleh owner cafe ketika anda telah sampai di cafe yang anda pesan.</p>
+                                                    </div>
+                                                    <div class="input-group form-group mt--5 mb-5">
+                                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Unggah Bukti Pembayaran</span>
+                                                        </label>
+                                                        <div class="col-lg-12 mt-2 text-center">
+                                                            <img id="image-preview" src="quixlab/images/media/media-3.png" width="100%" height="500px" class="rounded">
+                                                        </div>
+                                                        <div class="custom-file text-center mr-5 ml-5" style="display: block; margin: -10% auto;">
+                                                            <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="bukti_pembayaran" onchange="pickImage();">
+                                                            <label class="btn btn-warning text-white col-form-label text-center btn-lg" for="customFileLang"><i class="ti-export"></i></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer mt-3">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                                        <button type="submit" class="btn btn-warning text-white">Pesan Sekarang</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
             <!-- End Col -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
 
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
-
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
-
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
 
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <!-- End Col -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
 
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
-
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title mt-2">Kofibrik</h5>
-                        <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
-                    </div>
-                    <img class="img-fluid" src="asset/banner_cafe/kofibrik_banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-text"><i class="ti-time mr-2"></i>Setiap Hari 08.00 - 22.00 WIB</p>
-                        <a href="https://g.page/kofibrik-nginden-semolo-sby?share">
-                            <p class="card-text"><i class="ti-pin mr-2"></i>Jl. Nginden Semolo No.78, Ngenden Jangkungan</p>
-                        </a>
-                        <a href="https://www.instagram.com/kofibrik_ngindensemolo_sby/?hl=en" class="mt-2">
-                            <p class="card-text mt-3"><i class="ti-instagram mr-2"></i>kofibrik_ngindensemolo_sby</p>
-                        </a>
-
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+</div>
 </div>
 
 
@@ -203,82 +134,6 @@
 
 
 <!-- #/ container -->
-<!-- Modal Tambah -->
-<div class="modal fade" id="reservNow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reservasi Kofibrik</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="#" method="POST">
-                    <div class="row align-items-top">
-                        <div class="col-md-4 col-lg-3">
-                            <div class="nav flex-column nav-pills">
-                                <a href="#v-pills-checkout" data-toggle="pill" class="nav-link active show"><i class="ti-receipt mr-2"></i> Data Reservasi</a>
-                                <a href="#v-pills-payment" data-toggle="pill" class="nav-link "><i class="ti-credit-card mr-2"></i> Pembayaran</a>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-lg-9">
-                            <div class="tab-content">
-
-                                <div id="v-pills-checkout" class="tab-pane fade active show">
-                                    <!-- informasi -->
-                                    <div class="input-group form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Atas Nama Pesanan</span></label>
-                                        <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Waktu Reservasi</span></label>
-                                        <input type="text" id="date-format" class="form-control" placeholder="Saturday 24 June 2017 - 21:44">
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Jumlah Kursi</span></label>
-                                        <input type="number" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Note</span></label>
-                                        <textarea type="text" class="form-control rounded" placeholder="Tambahkan catatan untuk cafe" rows="3" aria-label="Amount (to the nearest dollar)"></textarea>
-                                    </div>
-                                </div>
-                                <div id="v-pills-payment" class="tab-pane fade">
-                                    <!-- upload Pembayaran -->
-                                    <div class="input-group form-group">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Metode Pembayaran</span></label>
-                                        <div class="btn-group mb-2">
-                                            <button class="btn btn-warning text-white" type="button">Transfer Full</button>
-                                            <button class="btn btn-warning text-white" type="button">DP 50%</button>
-                                            <h4 class="h4 mt-2 ml-5"><span class=" ml-5"><strong class="ml-5">Rp 25.000,-</strong></span></h4>
-                                            <button class="btn btn-secondary text-white ml-5" type="button" data-toggle="modal" data-dismiss="modal" data-toggle="tooltip" data-target="#payGuide" title="Bank Virtual Account"><i class="ti-info-alt"></i></button>
-                                        </div>
-                                        <p class="ml-2 mt-2 text-muted">*) Silahkan klik icon info untuk melakukan pembayaran melalui bank virtual account.</p>
-                                    </div>
-                                    <div class="input-group form-group mt--5 mb-5">
-                                        <label class="col-lg-12 col-form-label text-left" for="val-skill">Unggah Bukti Pembayaran</span>
-                                        </label>
-                                        <div class="col-lg-12 mt-2 text-center">
-                                            <img id="image-preview" src="quixlab/images/media/media-3.png" width="100%" height="500px" class="rounded">
-                                        </div>
-                                        <div class="custom-file text-center mr-5 ml-5" style="display: block; margin: -10% auto;">
-                                            <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="img_bukti" onchange="pickImage();">
-                                            <label class="btn btn-warning text-white col-form-label text-center btn-lg" for="customFileLang"><i class="ti-export"></i></label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer mt-3">
-                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-                        <button type="button" class="btn btn-warning text-white">Pesan Sekarang</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Modal Pay Guide -->
 <div class="modal fade" id="payGuide" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
