@@ -40,7 +40,7 @@
                         </li>
 
                     </ul>
-                    <button class="btn btn-warning text-white btn-lg mt-5" data-target="#updatePassword" data-toggle="modal" style="display: block; margin: auto;">Ubah Password</button>
+                    <!-- <button class="btn btn-warning text-white btn-lg mt-5" data-target="#updatePassword" data-toggle="modal" style="display: block; margin: auto;">Ubah Password</button> -->
                 </div>
             </div>
         </div>
@@ -49,8 +49,8 @@
                 <div class="card-body">
                     <h3 class="mb-4">Edit Profil</h3>
                     <form action="<?= base_url(); ?>profil_user/edit_profil" class="form-profile text-center" method="post" enctype="multipart/form-data">
-                        <input type="text" class="form-control rounded" placeholder="" name="id_user" value="<?= $this->session->userdata('id_user'); ?>" readonly>
-                        <div class="input-group form-group mt--4 text-center">
+                        <input type="text" class="form-control rounded" placeholder="" name="id_user" value="<?= $this->session->userdata('id_user'); ?>" hidden>
+                        <!-- <div class="input-group form-group mt--4 text-center">
                             <div class="col-lg-12 mt-5 text-center" style="display: block; margin: -2% auto 2% auto;">
                                 <img id="ava-preview" src="assets/images/icon-user.png" width="18%" height="200" class="rounded-circle">
                             </div>
@@ -58,7 +58,7 @@
                                 <input type="file" class="custom-file-input" id="customFileAva" lang="en" name="img_user" onchange="pickAva();">
                                 <label class="btn btn-info col-lg-2 text-center btn-lg" for="customFileAva"><i class="ti-camera"></i></label>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="input-group form-group">
                             <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Lengkap</span>
                             </label>

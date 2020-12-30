@@ -23,6 +23,7 @@ class LoginUser_model extends CI_Model
                     'email_user' => $row->email_user,
                     'bio' => $row->bio,
                     'alamat_user' => $row->alamat_user,
+                    // 'img_user' => $row->img_user,
                 );
             }
 

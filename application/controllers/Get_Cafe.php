@@ -8,6 +8,7 @@ class Get_Cafe extends CI_Controller
         $this->load->model('CafeProfil_model');
         $this->load->model('LoginUser_model');
         $this->load->model('Reserv_model');
+        $this->load->library('session');
     }
     public function index()
     {

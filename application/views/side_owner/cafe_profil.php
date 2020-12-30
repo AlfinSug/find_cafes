@@ -3,7 +3,7 @@
             <div class="col-lg-6 col-xl-4">
                 <div class="card">
                     <div class="card-body">
-                        <img class="mr-3 rounded" src="asset/pictures.png" width="100%" height="350" alt="">
+                        <img class="mr-3 rounded" src="<?= $this->session->userdata('banner_cafe'); ?>" width="100%" height="350" alt="">
                         <div class="media align-items-center mb-4">
                             <div class="media-body text-center mt-3">
                                 <h3 class="mb-0"><?= $this->session->userdata('nama_cafe'); ?></h3>
@@ -47,12 +47,12 @@
                             </li>
                             <li class="mb-1"><strong class="text-dark ">Instagram</strong>
                                 <a href="https://www.instagram.com/<?= $this->session->userdata['sosmed']; ?>/">
-                                    <div><?= $this->session->userdata['sosmed']; ?></div>
+                                    <div><?= $this->session->userdata('sosmed'); ?></div>
                                 </a>
                             </li>
                             <li><strong class="text-dark">Alamat</strong>
-                                <a href="<?= $this->session->userdata['url_maps']; ?>">
-                                    <div><?= $this->session->userdata['alamat_cafe']; ?></div>
+                                <a href="<?= $this->session->userdata('url_maps'); ?>">
+                                    <div><?= $this->session->userdata('alamat_cafe'); ?></div>
                                 </a>
                             </li>
 
@@ -65,22 +65,22 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="mb-4">Edit Profil Cafe</h3>
-                        <form action="#" class="form-profile">
+                        <form action="<?= base_url(); ?>cafe_profil/edit_profils" class="form-profile" method="post" enctype="multipart/form-data">
+                            <input type="text" class="form-control rounded" placeholder="" name="id_cafe" value="<?= $this->session->userdata('id_cafe'); ?>" hidden>
 
                             <div class="input-group form-group mt--5 col-lg-6 text-center" style="margin: auto;">
                                 <div class="col-lg-12   text-center">
-                                    <img id="banner-preview" src="asset/pictures.png" width="100%" height="350px" class="rounded">
+                                    <img id="banner-preview" src="<?= $this->session->userdata('banner_cafe'); ?>" width="100%" height="350px" class="rounded">
                                 </div>
                                 <div class="float-left custom-file text-center mt--5 mr-3 ml-3">
-                                    <input type="file" class="custom-file-input" id="customFileBanner" lang="en" name="img_bukti" onchange="pickBanner();">
+                                    <input type="file" class="custom-file-input" id="customFileBanner" lang="en" name="img_bukti" onchange="pickBanner();" disabled>
                                     <label class="btn btn-info col-lg-12 col-form-label text-center btn-lg" for="customFileBanner"><i class="ti-export mr-2"></i>Unggah Banner Cafe</label>
                                 </div>
                             </div>
-
                             <div class="input-group form-group mt-5">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Cafe</span>
                                 </label>
-                                <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" class="form-control rounded" placeholder="" name="nama_cafe" value="<?= $this->session->userdata('nama_cafe'); ?>" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span class="input-group-text text-primary"><i class="ti-tag"></i></span>
                                 </div>
@@ -88,7 +88,7 @@
                             <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Email</span>
                                 </label>
-                                <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" class="form-control rounded" placeholder="" name="email_cafe" value="<?= $this->session->userdata('email_cafe'); ?>" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span class="input-group-text text-primary"><i class="ti-email"></i></span>
                                 </div>
@@ -96,7 +96,7 @@
                             <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Phone Number</span>
                                 </label>
-                                <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" class="form-control rounded" placeholder="" name="notelp_cafe" value="<?= $this->session->userdata('notelp_cafe'); ?>" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span class="input-group-text text-primary"><i class="ti-mobile"></i></span>
                                 </div>
@@ -104,7 +104,7 @@
                             <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Jam Buka</span>
                                 </label>
-                                <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" class="form-control rounded" placeholder="" name="jam_buka" value="<?= $this->session->userdata('jam_buka'); ?>" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span class="input-group-text text-primary"><i class="ti-time"></i></span>
                                 </div>
@@ -112,7 +112,7 @@
                             <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Akun Instagram</span>
                                 </label>
-                                <input type="text" class="form-control rounded" placeholder="" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" class="form-control rounded" name="sosmed" placeholder="" value="<?= $this->session->userdata('sosmed'); ?>" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span class="input-group-text text-primary"><i class="ti-instagram"></i></span>
                                 </div>
@@ -120,16 +120,15 @@
                             <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Alamat</span>
                                 </label>
-                                <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="4" placeholder="Address Cafe"></textarea>
+                                <textarea class="form-control" name="textarea" name="alamat_cafe" id="textarea" cols="30" rows="4" placeholder="Address Cafe"><?= $this->session->userdata('alamat_cafe'); ?></textarea>
                             </div>
                             <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Url Maps</span>
                                 </label>
-                                <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="4" placeholder="Post a new message"></textarea>
+                                <textarea class="form-control" name="textarea" name="url_maps" id="textarea" cols="30" rows="4" placeholder="Post a new message"><?= $this->session->userdata('url_maps'); ?></textarea>
                             </div>
                             <div class="input-group">
-
-                                <button class="btn btn-warning text-white btn-lg mt-2" style="display: block; margin: auto;">Simpan</button>
+                                <button type="submit" class="btn btn-warning text-white btn-lg mt-2" style="display: block; margin: auto;">Simpan</button>
                             </div>
                         </form>
                     </div>

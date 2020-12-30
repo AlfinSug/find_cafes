@@ -152,8 +152,8 @@
 
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                
-                                <img src="assets/images/icon-user.png" height="50" width="100%" alt="">
+
+                                <img src="asset/img_user/picture.png" height="50" width="100%" alt="">
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">
