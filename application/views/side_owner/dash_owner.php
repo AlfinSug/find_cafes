@@ -8,34 +8,24 @@
         <h3>Selamat Datang, <strong><?= $this->session->userdata('nama_cafe'); ?></strong> </h3>
 
         <div class="row mt-5">
-            <div class="col-6">
-                <div class="card">
+            <div class="col-12">
+                <div class="card gradient-3">
                     <div class="stat-widget-one">
                         <div class="stat-content">
-                            <div class="stat-text">Total Reservasi</div>
-                            <div class="stat-digit gradient-3-text">50 Reservasi</div>
+                            <?php foreach ($total_reserv as $total) { ?>
+                                <div class="stat-text">Total Reservasi</div>
+                                <div class="stat-digit text-white"><?= $total['total_reserv']; ?> Reservasi</div>
+
                         </div>
                         <div class="progress mb-3">
-                            <div class="progress-bar gradient-3" style="width: 50%;" role="progressbar"><span class="sr-only">50% Complete</span>
+                            <div class="progress-bar gradient-6" style="width: <?= $total['total_reserv']; ?>%;" role="progressbar"><span class="sr-only"><?= $total['total_reserv']; ?>% Complete</span>
                             </div>
                         </div>
+                    <?php } ?>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="stat-widget-one">
-                        <div class="stat-content">
-                            <div class="stat-text">Total Pendapatan</div>
-                            <div class="stat-digit gradient-6-text">Rp 150.000.000,-</div>
-                        </div>
-                        <div class="progress mb-3">
-                            <div class="progress-bar gradient-6" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
 
@@ -50,49 +40,67 @@
                                     <thead class="text-center mt-5">
                                         <tr>
                                             <th>Nama Cangkrukers</th>
-                                            <!-- <th>Nama Cafe</th> -->
-                                            <th>Total Biaya Reservasi</th>
+                                            <th>Total Biaya Komitmen</th>
                                             <th>Jumlah Kursi</th>
                                             <th>Tanggal Reservasi</th>
                                             <th>Status Reservasi</th>
-                                            <!-- <th>Menu Pesanan</th> -->
-                                            <th>Bukti Pembayaran DP Reservasi</th>
+
+                                            <th>Bukti Pembayaran Komitmen</th>
+
                                         </tr>
+
                                     </thead>
                                     <tbody class="text-center">
-                                        <tr>
-                                            <td>Alfin Sugestian</td>
-                                            <!-- <td>Ada Apa Dengan Koffee</td> -->
-                                            <td>Rp 250.000,</td>
-                                            <td>5 Kursi
-                                            <td>Senin, 23 April 2020</td>
-                                            <td><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima</td>
-                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
-                                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
+                                        <?php foreach ($list_reserv as $td) { ?>
+                                            <tr>
+                                                <td><?= $td['nama_user']; ?></td>
+                                                <td>Rp 15.000,-</td>
+                                                <td><?= $td['jumlah_kursi']; ?> Kursi
+                                                <td><?= $td['tgl_reserv']; ?></td>
+                                                <td>
+                                                    <?php if ($td['status_reserv'] == 0) { ?>
+                                                        <i class="fa fa-circle-o text-warning mr-1"></i> <span class="mr-2">Proses
+                                                        <?php } elseif ($td['status_reserv'] == 1) { ?>
+                                                            <i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima
+                                                            <?php } elseif ($td['status_reserv'] == 2) { ?>
+                                                                <i class="fa fa-circle-o text-danger mr-1"></i> <span class="mr-2">Ditolak
+                                                                <?php } elseif ($td['status_reserv'] == 3) { ?>
+                                                                    <i class="ti-close text-danger mr-1"></i> <span class="mr-2 text-danger">Dibatalkan
+                                                                    <?php } ?>
+                                                </td>
+                                                <td>
+                                                    <?php if ($td['status_reserv'] == 0) { ?>
+                                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran<?= $td['id_reserv']; ?>"><i class="ti-image mr-2"></i> Detail</button>
+                                                    <?php } elseif ($td['status_reserv'] == 1) { ?>
+                                                        <button type="button" onclick="refunded()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
+                                                    <?php } elseif ($td['status_reserv'] == 2) { ?>
+                                                        <button type="button" onclick="refunded()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
+                                                    <?php } elseif ($td['status_reserv'] == 3) { ?>
+                                                        <button type="button" onclick="refunded()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
+                                                    <?php } ?>
+                                                </td>
+                                            </tr>
 
-                                        </tr>
-                                        <tr>
-                                            <td>Derry Ajes</td>
-                                            <!-- <td>Ada Apa Dengan Koffee</td> -->
-                                            <td>Rp 150.000,</td>
-                                            <td>3 Kursi
-                                            <td>Senin, 23 April 2020</td>
-                                            <td><i class="fa fa-circle-o text-warning mr-1"></i> <span class="mr-2">Proses</td>
-                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
-                                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
+                                            <!-- Modal Bukti Pembayaran -->
+                                            <div class="modal fade " id="detail-bukti-pembayaran<?= $td['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Detail Bukti Pembayaran</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="asset/img_bukti/<?= $td['bukti_pembayaran']; ?>" type="application/pdf" width="100%" height="500px" />
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
 
-                                        </tr>
-                                        <tr>
-                                            <td>Ucup</td>
-                                            <!-- <td>Ada Apa Dengan Koffee</td> -->
-                                            <td>Rp 450.000,</td>
-                                            <td>6 Kursi
-                                            <td>Senin, 23 April 2020</td>
-                                            <td><i class="fa fa-circle-o text-danger mr-1"></i> <span class="mr-2">Ditolak</td>
-                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
-                                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
-
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -111,7 +119,7 @@
 		***********************************-->
 
 
-<!--**********************************
+<!--********************************
             Footer start
         ***********************************-->
 <div class="footer">
@@ -126,84 +134,16 @@
 <!--**********************************
         Main wrapper end
     ***********************************-->
-<!-- Modal Bukti Pembayaran -->
-<div class="modal fade " id="detail-bukti-pembayaran" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Detail Bukti Pembayaran</h5>
-                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="quixlab/images/media/media-1.png" type="application/pdf" width="100%" height="500px" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+    function refunded() {
+        swal(
+            "Refund Payment",
+            "Pembayaran telah kami refund kepada <?= $td['nama_user']; ?>",
+            "success"
+        );
+    }
+</script>
 
-<!-- Modal Detail Menu -->
-<div class="modal fade" id="detail-pesanan" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Detail Menu</h5>
-                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <div class="input-group mt-2">
-                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
-                        <div class="form-group">
-                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
-                            <span class="ml-5 row">
-                                <h6 class="mt-2 h6">x 4</h6>
-                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-group mt-2">
-                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
-                        <div class="form-group">
-                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
-                            <span class="ml-5 row">
-                                <h6 class="mt-2 h6">x 4</h6>
-                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-group mt-2">
-                        <img src="asset/gambar_kopi/milk.png" class="rounded mr-2 ml-2" width="60" height="100" alt="">
-                        <div class="form-group">
-                            <h4 class="ml-5 mt-4 h4">Ice Milk</h4>
-                            <span class="ml-5 row">
-                                <h6 class="mt-2 h6">x 4</h6>
-                                <h6 class="float-right ml-5 mt-2 h6">Rp 20.000,-</h6>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-group mt-5">
-                        <div class="form-group">
-                            <span class="ml-3 row">
-                                <h3 class="mt-2 h3">Total</h3>
-                                <h3 class="float-right ml-5 mt-2 h3"><strong class="ml-5 text-success">Rp 60.000,-</strong> </h3>
-                            </span>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-            </div>
-        </div>
-    </div>
-</div>
 <!--**********************************
         Scripts
     ***********************************-->
@@ -231,7 +171,8 @@
 <script src="quixlab/plugins/chartist/js/chartist.min.js"></script>
 <script src="quixlab/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-
+<script src="quixlab/plugins/sweetalert/js/sweetalert.min.js"></script>
+<script src="quixlab/plugins/sweetalert/js/sweetalert.init.js"></script>
 
 <script src="quixlab/js/dashboard/dashboard-1.js"></script>
 

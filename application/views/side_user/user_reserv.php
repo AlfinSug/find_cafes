@@ -40,22 +40,66 @@
                                     </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                    <tr>
-                                        <td>Alfin Sugestian</td>
-                                        <td>Ada Apa Dengan Koffee</td>
-                                        <td>Rp 250.000,</td>
-                                        <td>5 Kursi
-                                        <td>Senin, 23 April 2020</td>
-                                        <td><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima</td>
-                                        <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran"><i class="ti-image mr-2"></i> Detail</button></td>
-                                        <td><a href="tel:08974879215"><button type="button" class="btn btn-success text-white"><i class="ti-mobile mr-2"></i> Hubungi Owner</button></a></td>
-                                        <td>
-                                            <div class="sweetalert m-t-30">
-                                                <button class="btn btn-danger btn sweet-confirm"><i class="ti-close mr-2"></i>Batal</button>
+                                    <?php foreach ($list_reserv as $list) { ?>
+                                        <tr>
+                                            <td><?= $list['nama_user']; ?></td>
+                                            <td><?= $list['nama_cafe']; ?></td>
+                                            <td>Rp 15.000,</td>
+                                            <td><?= $list['jumlah_kursi']; ?> Kursi</td>
+                                            <td><?= $list['tgl_reserv']; ?></td>
+                                            <td> <?php if ($list['status_reserv'] == 0) { ?>
+                                                    <i class="fa fa-circle-o text-warning mr-1"></i> <span class="mr-2">Proses
+                                                    <?php } elseif ($list['status_reserv'] == 1) { ?>
+                                                        <i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Diterima
+                                                        <?php } elseif ($list['status_reserv'] == 2) { ?>
+                                                            <i class="fa fa-circle-o text-danger mr-1"></i> <span class="mr-2">Ditolak
+                                                            <?php } elseif ($list['status_reserv'] == 3) { ?>
+                                                                <i class="ti-close text-danger mr-1"></i> <span class="mr-2 text-danger">Dibatalkan
+                                                                <?php } ?>
+                                            </td>
+                                            <!-- <td><button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#detail-pesanan"><i class="ti-clipboard mr-2"></i> Lihat Menu</button></td> -->
+                                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran<?= $list['id_reserv']; ?>"><i class="ti-image mr-2"></i> Detail</button></td>
+                                            <td><a href="tel:<?= $list['notelp_cafe']; ?>"><button type="button" class="btn btn-success text-white"><i class="ti-mobile mr-2"></i> Hubungi Owner</button></a></td>
+                                            <td>
+                                                <?php if ($list['status_reserv'] == 0) { ?>
+                                                    <div class="sweetalert m-t-30">
+                                                        <a href="user_reserv/canceled?id_reserv=<?= $list['id_reserv']; ?>&sval=<?= $list['status_reserv']; ?>" class="btn btn-danger btn sweet-confirm"><i class="ti-close mr-2"></i>Batal</a>
+                                                    </div>
+                                                <?php } elseif ($list['status_reserv'] == 1) { ?>
+                                                    <!-- <div class="sweetalert m-t-30"> -->
+                                                    <!-- <a href="" class="btn btn-outline-success btn sweet-confirm"><i class="ti-close mr-2"></i>Diterima</a> -->
+                                                    <!-- </div> -->
+                                                <?php } elseif ($list['status_reserv'] == 2) { ?>
+                                                    <!-- <div class="sweetalert m-t-30"> -->
+                                                    <!-- <a href="" class="btn btn-outline-danger btn sweet-confirm"><i class="ti-close mr-2"></i>Ditolak</a> -->
+                                                    <!-- </div> -->
+                                                <?php } elseif ($list['status_reserv'] == 3) { ?>
+                                                    <div class="sweetalert m-t-30">
+                                                        <a href="" class="btn btn-danger btn sweet-confirm"><i class="ti-close mr-2" read></i>Dibatalkan</a>
+                                                    </div>
+                                                <?php } ?>
+
+                                            </td>
+                                        </tr>
+                                        <!-- Modal Bukti Pembelian -->
+                                        <div class="modal fade " id="detail-bukti-pembayaran<?= $list['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Detail Bukti Pembayaran</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="asset/img_bukti/<?= $list['bukti_pembayaran']; ?>" type="application/pdf" width="100%" height="500px" />
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -70,24 +114,7 @@
 
 </div>
 
-<!-- Modal Bukti Pembelian -->
-<div class="modal fade " id="detail-bukti-pembayaran" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Detail Bukti Pembayaran</h5>
-                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="quixlab/images/media/media-1.png" type="application/pdf" width="100%" height="500px" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- Modal Detail Menu -->
 <div class="modal fade" id="detail-reservasi" tabindex="-1" role="dialog" aria-hidden="true">
@@ -269,17 +296,6 @@
         ***********************************-->
 </div>
 
-<script>
-    function pickImage() {
-        document.getElementById("image-preview").style.display = "block";
-        var oFReader = new FileReader();
-        oFReader.readAsDataURL(document.getElementById("customFileLang").files[0]);
-
-        oFReader.onload = function(oFREvent) {
-            document.getElementById("image-preview").src = oFREvent.target.result;
-        };
-    };
-</script>
 
 <!--**********************************
         Scripts

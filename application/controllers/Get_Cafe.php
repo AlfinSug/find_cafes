@@ -15,6 +15,7 @@ class Get_Cafe extends CI_Controller
         if ($this->LoginUser_model->check_session()) {
             $data['title'] = 'All Cafe';
             $data['cafe_catalog'] = $this->CafeProfil_model->getAllCafe();
+            $data['list_reserv'] = $this->Reserv_model->getReservUser();
             $this->load->view('utils/header-server', $data);
             $this->load->view('side_user/get_cafe');
         } else {

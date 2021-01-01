@@ -7,12 +7,13 @@ class Cafe_Profil extends CI_Controller
     {
         parent::__construct();
         $this->load->model('CafeProfil_model');
-        // $this->load->model('LoginUser_model');
+        $this->load->model('Reserv_model');
         $this->load->library('session');
     }
     public function index()
     {
         $data['title'] = 'Cafe Profil';
+        $data['list_reserv'] = $this->Reserv_model->getReservUser();
         $this->load->view('utils/header-owner', $data);
         $this->load->view('side_owner/cafe_profil');
     }
