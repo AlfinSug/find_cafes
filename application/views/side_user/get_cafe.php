@@ -8,7 +8,13 @@
                     <div class="card">
                         <div class="card-header bg-white">
                             <h5 class="card-title mt-2"><?= $row['nama_cafe']; ?></h5>
-                            <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
+                            <?php if ($row['akses_cafe'] == 'online') { ?>
+                                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-success mr-1"></i> <span class="mr-2">Masih Ada Kuota</h6>
+                            <?php } elseif ($row['akses_cafe'] == 'offline') { ?>
+                                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-danger mr-1"></i> <span class="mr-2">Full/Tutup</h6>
+                            <?php } else { ?>
+                                <h6 class="card-subtitle mb-2 mt-2 text-muted"><i class="fa fa-circle-o text-info mr-1"></i> <span class="mr-2">Akses belum di set oleh owner</h6>
+                            <?php } ?>
                         </div>
                         <img class="img-fluid" src="<?= $row['banner_cafe']; ?>" alt="">
                         <div class="card-body">
@@ -23,7 +29,14 @@
                         </div>
                         <div class="card-footer text-center">
                             <a href="#">
-                                <button type="button" class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow<?= $row['id_cafe']; ?>">Pesan Sekarang</button>
+                                <?php if ($row['akses_cafe'] == 'online') { ?>
+                                    <button type="button" class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow<?= $row['id_cafe']; ?>">Pesan Sekarang</button>
+                                <?php } elseif ($row['akses_cafe'] == 'offline') { ?>
+                                    <button type="button" class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-toggle="tooltip" title="Maaf cafe tutup, tidak bisa pesan sekarang" data-target="#reservNow<?= $row['id_cafe']; ?>" disabled>Pesan Sekarang</button>
+                                <?php } else { ?>
+                                    <button type="button" class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-toggle="tooltip" title="Maaf akses cafe belum di set, tidak bisa pesan sekarang" data-target="#reservNow<?= $row['id_cafe']; ?>" disabled>Pesan Sekarang</button>
+                                <?php } ?>
+
                             </a>
                         </div>
                     </div>

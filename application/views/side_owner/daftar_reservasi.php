@@ -36,6 +36,11 @@
                                             <tr>
                                                 <th>No. Reservasi</th>
                                                 <th>Nama Cangkrukers</th>
+                                                <?php if ($row['status_reserv'] == 1) { ?>
+                                                    <th>No. Meja</th>
+                                                <?php } else { ?>
+                                                    <!-- <th>Meja <?= $row['no_meja']; ?></th> -->
+                                                <?php } ?>
                                                 <th>Total Biaya Reservasi</th>
                                                 <th>Jumlah Kursi</th>
                                                 <th>Tanggal Reservasi</th>
@@ -58,6 +63,10 @@
                                             <tr>
                                                 <td>#R00<?= $row['id_reserv']; ?></td>
                                                 <td><?= $row['nama_user']; ?></td>
+                                                <?php if ($row['status_reserv'] == 1) { ?>
+                                                    <td>Meja <?= $row['no_meja']; ?></td>
+                                                <?php } else { ?>
+                                                <?php } ?>
                                                 <td>Rp 15.000,</td>
                                                 <td><?= $row['jumlah_kursi']; ?> Kursi</td>
                                                 <td><?= $row['tgl_reserv']; ?></td>
@@ -86,7 +95,7 @@
                                                 <td>
                                                     <?php if ($row['status_reserv'] == 0) { ?>
                                                         <div class="sweetalert m-t-30">
-                                                            <a href="daftar_reservasi/accepted?id_reserv=<?= $row['id_reserv']; ?>&sval=<?= $row['status_reserv']; ?>" class="btn btn-success text-white btn sweet-confirm"><i class="ti-check mr-2"></i>Terima</a>
+                                                            <button type="button" class="btn btn-success text-white btn sweet-confirm" data-toggle="modal" data-target="#pilih-no-meja<?= $row['id_reserv']; ?>"><i class="ti-check mr-2"></i>Terima</button>
                                                         </div>
                                                     <?php } elseif ($row['status_reserv'] == 1) { ?>
 
@@ -110,6 +119,46 @@
                                                     <?php } ?>
                                                 </td>
                                             </tr>
+
+                                            <!-- Modal Detail Menu -->
+                                            <div class="modal fade" id="pilih-no-meja<?= $row['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Nomor Meja</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="daftar_reservasi/accepted?id_reserv=<?= $row['id_reserv']; ?>&sval=<?= $row['status_reserv']; ?>" method="post">
+                                                                <div class="form-group">
+                                                                    <label>Pilih Nomor Meja untuk <strong><?= $row['nama_user']; ?></strong></label>
+                                                                    <div class="">
+                                                                        <select class="form-control rounded" id="val-skill" name="no_meja">
+                                                                            <option value="NULL">- Pilih Nomor Meja -</option>
+                                                                            <option value="1">Meja 1</option>
+                                                                            <option value="2">Meja 2</option>
+                                                                            <option value="3">Meja 3</option>
+                                                                            <option value="4">Meja 4</option>
+                                                                            <option value="5">Meja 5</option>
+                                                                            <option value="6">Meja 6</option>
+                                                                            <option value="7">Meja 7</option>
+                                                                            <option value="8">Meja 8</option>
+                                                                            <option value="9">Meja 9</option>
+                                                                            <option value="10">Meja 10</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                                                                    <button type="submit" class="btn btn-warning">Kirim</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
                                             <!-- Modal Detail Menu -->

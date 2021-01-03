@@ -27,11 +27,5 @@ class User_Reserv extends CI_Controller
             }
             return redirect('user_reserv');
         }
-
-        // $id_reserv = $this->input->post('id_reserv', true);
-        // $status_reserv = $this->input->post('status_reserv', true);
-        // $this->Reserv_model->cancel_reserv($id_reserv, $status_reserv);
-        // $this->session->set_flashdata('edit_success', '<script>swal("Cancel", "Reservasi telah dibatalkan", "success")</script>');
-        // redirect('user_reserv');
     }
 }

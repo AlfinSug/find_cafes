@@ -4,7 +4,11 @@
             <div class="card">
                 <div class="card-body">
                     <div class="media align-items-center mb-4">
-                        <img class="mr-3 rounded-circle" src="assets/images/icon-user.png" width="80" height="80" alt="">
+                        <?php if ($this->session->userdata('img_user') != null) { ?>
+                            <img class="mr-3 rounded-circle" src="asset/img_user/<?= $this->session->userdata('img_user'); ?>" width="80" height="80" alt="">
+                        <?php } else { ?>
+                            <img class="mr-3 rounded-circle" src="asset/img_user/img-user.png" width="80" height="80" alt="">
+                        <?php } ?>
                         <div class="media-body">
                             <h3 class="mb-0"><?= $this->session->userdata('nama_user'); ?></h3>
                             <p class="text-muted mb-0"><?= $this->session->userdata('email_user'); ?></p>
@@ -13,20 +17,36 @@
 
                     <div class="row mb-2">
                         <div class="col">
-                            <div class="card card-profile text-center">
-                                <span class="mb-1 text-primary"><i class="ti-comments-smiley"></i></span>
-                                <h3 class="mb-0">20</h3>
-                                <p class="text-muted px-4">Total Cangkruk</p>
-                            </div>
+                            <?php foreach ($acc_reserv_user as $acc) { ?>
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-info"><i class="ti-face-smile"></i></span>
+                                    <h3 class="mb-0"><?= $acc['acc_reserv']; ?></h3>
+                                    <p class="text-muted px-4">Reservasi Diterima</p>
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="col">
-                            <div class="card card-profile text-center">
-                                <span class="mb-1 text-warning"><i class="ti-medall"></i></span>
-                                <h3 class="mb-0">50</h3>
-                                <p class="text-muted">Point</p>
-                            </div>
+                            <?php foreach ($refuse_reserv_user as $ref) { ?>
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-warning"><i class="ti-face-sad"></i></span>
+                                    <h3 class="mb-0"><?= $ref['ref_reserv']; ?></h3>
+                                    <p class="text-muted">Reservasi Di Tolak</p>
+                                </div>
+                            <?php } ?>
                         </div>
 
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <?php foreach ($cancel_reserv_user as $cancel) { ?>
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-danger"><i class="ti-close"></i></span>
+                                    <h3 class="mb-0"><?= $cancel['cancel_reserv']; ?></h3>
+                                    <p class="text-muted px-4">Reservasi Di Batalkan</p>
+                                </div>
+                            <?php } ?>
+
+                        </div>
                     </div>
 
                     <h4 class="text-center">Bio</h4>

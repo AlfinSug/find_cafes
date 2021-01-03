@@ -8,7 +8,7 @@
             <h4>Find Cafe's</h4>
             <h6>THE BEST INOVATION</h6>
             <div class="main-white-button scroll-to-section">
-              <a href=" <?= base_url(); ?>auth_login">Make A Reservation</a>
+              <a href=" <?= base_url(); ?>auth_loginuser">Make A Reservation</a>
             </div>
           </div>
         </div>

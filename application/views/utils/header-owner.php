@@ -93,39 +93,7 @@
                 </div>
                 <div class="header-right">
                     <ul class="clearfix">
-                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
-                                <i class="ti-direction-alt"></i>
-                            </a>
-                            <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
-                                <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">Akses Cafe</span>
-                                </div>
-                                <div class="dropdown-content-body">
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-success-lighten-2 bg-success"><i class="ti-check"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="h5">Buka Cafe</h6>
-                                                    <span class="notification-text text-muted">Gunakan fitur buka cafe jika cafe masih buka atau sepi pengunjung</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-danger-lighten-2 bg-danger"><i class="ti-close"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="h5">Tutup Cafe</h6>
-                                                    <span class="notification-text text-muted">Gunakan fitur tutup cafe jika cafe tutup atau ramai pengunjung</span>
-                                                </div>
-                                            </a>
-                                        </li>
 
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </li>
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
                                 <i class="mdi mdi-bell-outline"></i>
                                 <!-- <span class="badge badge-pill gradient-2">1</span> -->
@@ -288,7 +256,11 @@
 
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="<?= $this->session->userdata('banner_cafe'); ?>" height="40" width="40" alt="">
+                                <?php if ($this->session->userdata('banner_cafe') != null) { ?>
+                                    <img src="<?= $this->session->userdata('banner_cafe'); ?>" height="40" width="40" alt="">
+                                <?php } else { ?>
+                                    <img src="assets/images/img-owner.png" height="40" width="40" alt="">
+                                <?php } ?>
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">

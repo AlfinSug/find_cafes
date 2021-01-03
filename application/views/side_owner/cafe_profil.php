@@ -3,37 +3,54 @@
             <div class="col-lg-6 col-xl-4">
                 <div class="card">
                     <div class="card-body">
-                        <img class="mr-3 rounded" src="<?= $this->session->userdata('banner_cafe'); ?>" width="100%" height="350" alt="">
+                        <?php if ($this->session->userdata('banner_cafe') != null) { ?>
+                            <img class="mr-3 rounded" src="<?= $this->session->userdata('banner_cafe'); ?>" width="100%" height="350" alt="">
+                        <?php } else { ?>
+                            <img class="mr-3 rounded" src="assets/images/img-owner.png" width="100%" height="350" alt="">
+
+                        <?php } ?>
                         <div class="media align-items-center mb-4">
                             <div class="media-body text-center mt-3">
                                 <h3 class="mb-0"><?= $this->session->userdata('nama_cafe'); ?></h3>
                                 <p class="text-muted mb-0"><?= $this->session->userdata('email_cafe'); ?></p>
+                                <?php if ($this->session->userdata('akses_cafe') === 'offline') { ?>
+                                    <button class="btn btn-danger text-white btn-sm mt-3" style="display: block; margin: auto;">Offline</button>
+                                <?php } elseif ($this->session->userdata('akses_cafe') === 'online') { ?>
+                                    <button class="btn btn-success text-white btn-sm mt-3" style="display: block; margin: auto;">Online</button>
+                                <?php } ?>
                             </div>
                         </div>
 
                         <div class="row mb-2">
                             <div class="col">
-                                <div class="card card-profile text-center">
-                                    <span class="mb-1 text-info"><i class="ti-face-smile"></i></span>
-                                    <h3 class="mb-0">30</h3>
-                                    <p class="text-muted px-4">Reservasi Diterima</p>
-                                </div>
+                                <?php foreach ($acc_reserv as $acc) { ?>
+                                    <div class="card card-profile text-center">
+                                        <span class="mb-1 text-info"><i class="ti-face-smile"></i></span>
+                                        <h3 class="mb-0"><?= $acc['acc_reserv']; ?></h3>
+                                        <p class="text-muted px-4">Penerima Reservasi</p>
+                                    </div>
+                                <?php } ?>
                             </div>
                             <div class="col">
-                                <div class="card card-profile text-center">
-                                    <span class="mb-1 text-danger"><i class="ti-face-sad"></i></span>
-                                    <h3 class="mb-0">4</h3>
-                                    <p class="text-muted">Reservasi Di Tolak</p>
-                                </div>
+                                <?php foreach ($refuse_reserv as $ref) { ?>
+                                    <div class="card card-profile text-center">
+                                        <span class="mb-1 text-warning"><i class="ti-face-sad"></i></span>
+                                        <h3 class="mb-0"><?= $ref['ref_reserv']; ?></h3>
+                                        <p class="text-muted">Penolakan Reservasi</p>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="row mb-2">
                             <div class="col-lg-12">
-                                <div class="card card-profile text-center">
-                                    <span class="mb-1 text-warning"><i class="ti-medall"></i></span>
-                                    <h3 class="mb-0">30</h3>
-                                    <p class="text-muted px-4">Point</p>
-                                </div>
+                                <?php foreach ($cancel_reserv as $cancel) { ?>
+                                    <div class="card card-profile text-center">
+                                        <span class="mb-1 text-danger"><i class="ti-close"></i></span>
+                                        <h3 class="mb-0"><?= $cancel['cancel_reserv']; ?></h3>
+                                        <p class="text-muted px-4">Reservasi Di Batalkan</p>
+                                    </div>
+                                <?php } ?>
+
                             </div>
                         </div>
                         <ul class="card-profile__info text-center">
@@ -57,7 +74,6 @@
                             </li>
 
                         </ul>
-                        <button class="btn btn-warning text-white btn-lg mt-5" data-target="#updatePassword" data-toggle="modal" style="display: block; margin: auto;">Ubah Password</button>
                     </div>
                 </div>
             </div>
@@ -67,8 +83,27 @@
                         <h3 class="mb-4">Edit Profil Cafe</h3>
                         <form action="<?= base_url(); ?>cafe_profil/edit_profils" class="form-profile" method="post" enctype="multipart/form-data">
                             <input type="text" class="form-control rounded" placeholder="" name="id_cafe" value="<?= $this->session->userdata('id_cafe'); ?>" hidden>
+                            <div class="form-group mt-5">
+                                <label class="col-lg-12 col-form-label text-left" for="val-skill">Akses Cafe <span class="text-danger">*</span>
+                                </label>
+                                <div class="">
+                                    <select class="form-control rounded" id="val-skill" name="akses_cafe">
+                                        <?php if ($this->session->userdata('akses_cafe') == 'offline') { ?>
+                                            <option value="offline">Tutup Cafe</option>
+                                            <option value="online">Buka Cafe</option>
+                                        <?php } elseif ($this->session->userdata('akses_cafe') == 'online') { ?>
+                                            <option value="online">Buka Cafe</option>
+                                            <option value="offline">Tutup Cafe</option>
 
-                            <div class="input-group form-group mt-5">
+                                        <?php } else { ?>
+                                            <option value="NULL">- Pilih Akses Cafe</option>
+                                            <option value="online">Buka Cafe</option>
+                                            <option value="offline">Tutup Cafe</option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Nama Cafe</span>
                                 </label>
                                 <input type="text" class="form-control rounded" placeholder="" name="nama_cafe" value="<?= $this->session->userdata('nama_cafe'); ?>" aria-label="Amount (to the nearest dollar)">

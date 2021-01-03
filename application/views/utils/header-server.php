@@ -185,8 +185,11 @@
 
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
-
-                                <img src="asset/img_user/picture.png" height="50" width="100%" alt="">
+                                <?php if ($this->session->userdata('img_user') != null) { ?>
+                                    <img src="asset/img_user/<?= $this->session->userdata('img_user'); ?>" height="50" width="100%" alt="">
+                                <?php } else { ?>
+                                    <img src="asset/img_user/img-user.png" height="50" width="100%" alt="">
+                                <?php } ?>
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">

@@ -27,6 +27,7 @@ class LoginOwner_model extends CI_Model
                     'jumlah_meja' => $row->jumlah_meja,
                     'url_maps' => $row->url_maps,
                     'sosmed' => $row->sosmed,
+                    'akses_cafe' => $row->akses_cafe,
                 );
             }
 

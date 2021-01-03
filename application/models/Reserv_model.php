@@ -15,6 +15,42 @@ class Reserv_model extends CI_Model
     {
         return $this->db->query('select count(id_reserv) as total_reserv from reservation')->result_array();
     }
+
+    public function getCountAccReserv($id_cafe)
+    {
+        $id_cafe = $this->session->userdata('id_cafe');
+        return $this->db->query('select count(id_reserv) as acc_reserv from reservation where status_reserv = 1 and id_cafe=' . $id_cafe)->result_array();
+    }
+
+    public function getCountRefuseReserv($id_cafe)
+    {
+        $id_cafe = $this->session->userdata('id_cafe');
+        return $this->db->query('select count(id_reserv) as ref_reserv from reservation where status_reserv = 2 and id_cafe=' . $id_cafe)->result_array();
+    }
+
+    public function getCountCancelReserv($id_cafe)
+    {
+        $id_cafe = $this->session->userdata('id_cafe');
+        return $this->db->query('select count(id_reserv) as cancel_reserv from reservation where status_reserv = 3 and id_cafe=' . $id_cafe)->result_array();
+    }
+
+    public function getCountAccReservUser($id_user)
+    {
+        $id_user = $this->session->userdata('id_user');
+        return $this->db->query('select count(id_reserv) as acc_reserv from reservation where status_reserv = 1 and id_user=' . $id_user)->result_array();
+    }
+
+    public function getCountRefuseReservUser($id_user)
+    {
+        $id_user = $this->session->userdata('id_user');
+        return $this->db->query('select count(id_reserv) as ref_reserv from reservation where status_reserv = 2 and id_user=' . $id_user)->result_array();
+    }
+
+    public function getCountCancelReservUser($id_user)
+    {
+        $id_user = $this->session->userdata('id_user');
+        return $this->db->query('select count(id_reserv) as cancel_reserv from reservation where status_reserv = 3 and id_user=' . $id_user)->result_array();
+    }
     public function reservation()
     {
         $img_bukti = $_FILES['bukti_pembayaran']['name'];
@@ -75,6 +111,7 @@ class Reserv_model extends CI_Model
             $status = 0;
         }
         $data = array(
+            "no_meja" => $this->input->post('no_meja', true),
             "status_reserv" => $status
         );
         $this->db->where('id_reserv', $id_reserv);
