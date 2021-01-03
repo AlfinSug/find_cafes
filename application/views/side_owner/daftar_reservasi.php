@@ -41,11 +41,11 @@
                                                 <?php } else { ?>
                                                     <!-- <th>Meja <?= $row['no_meja']; ?></th> -->
                                                 <?php } ?>
-                                                <th>Total Biaya Reservasi</th>
+                                                <th>Biaya Komitmen Reservasi</th>
                                                 <th>Jumlah Kursi</th>
                                                 <th>Tanggal Reservasi</th>
                                                 <th>Status Reservasi</th>
-                                                <th>Bukti Pembayaran DP Reservasi</th>
+                                                <th>Bukti Pembayaran Komitmen</th>
                                                 <?php if ($row['status_reserv'] == 0) { ?>
                                                     <th colspan="2">Aksi</th>
                                                 <?php } elseif ($row['status_reserv'] == 1) { ?>
@@ -85,11 +85,11 @@
                                                     <?php if ($row['status_reserv'] == 0) { ?>
                                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-bukti-pembayaran<?= $row['id_reserv']; ?>"><i class="ti-image mr-2"></i> Detail</button>
                                                     <?php } elseif ($row['status_reserv'] == 1) { ?>
-                                                        <button type="button" onclick="refunded()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
+                                                        <button type="button" onclick="refund()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
                                                     <?php } elseif ($row['status_reserv'] == 2) { ?>
-                                                        <button type="button" onclick="refunded()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
+                                                        <button type="button" onclick="refund()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
                                                     <?php } elseif ($row['status_reserv'] == 3) { ?>
-                                                        <button type="button" onclick="refunded()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
+                                                        <button type="button" onclick="refund()" class="btn btn-warning text-white" data-toggle="modal" data-target="#"><i class="ti-info  mr-2"></i>Refund</button>
                                                     <?php } ?>
                                                 </td>
                                                 <td>
@@ -240,10 +240,10 @@
         Main wrapper end
     ***********************************-->
 <script>
-    function refunded() {
+    function refund() {
         swal(
             "Refund Payment",
-            "Pembayaran telah kami refund kepada <?= $td['nama_user']; ?>",
+            "Pembayaran telah kami refund kepada <?= $row['nama_user']; ?>",
             "success"
         );
     }

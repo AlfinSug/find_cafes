@@ -9,7 +9,6 @@ class Home extends CI_Controller
     }
     public function index()
     {
-
         $data['title'] = 'Home';
         $data['cafe_list'] = $this->CafeProfil_model->getCafeRecommended();
         $this->load->view('utils/header', $data);

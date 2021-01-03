@@ -17,10 +17,10 @@ class Get_Cafe extends CI_Controller
             $data['cafe_catalog'] = $this->CafeProfil_model->getAllCafe();
             $data['list_reserv'] = $this->Reserv_model->getReservUser();
             $this->load->view('utils/header-server', $data);
-            $this->load->view('side_user/get_cafe');
+            $this->load->view('side_user/get_cafe', $data);
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
-            redirect('auth_loginuser');
+            redirect('errorpage');
         }
     }
 

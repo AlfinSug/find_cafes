@@ -12,10 +12,15 @@ class User_Reserv extends CI_Controller
     }
     public function index()
     {
-        $data['title'] = 'User Reservation';
-        $data['list_reserv'] = $this->Reserv_model->getReservUser();
-        $this->load->view('utils/header-server', $data);
-        $this->load->view('side_user/user_reserv', $data);
+        if ($this->LoginUser_model->check_session()) {
+            $data['title'] = 'User Reservation';
+            $data['list_reserv'] = $this->Reserv_model->getReservUser();
+            $this->load->view('utils/header-server', $data);
+            $this->load->view('side_user/user_reserv', $data);
+        } else {
+            $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
+            redirect('errorpage');
+        }
     }
 
     public function canceled()

@@ -8,19 +8,25 @@ class Cafe_Profil extends CI_Controller
         parent::__construct();
         $this->load->model('CafeProfil_model');
         $this->load->model('Reserv_model');
+        $this->load->model('LoginOwner_model');
         $this->load->library('session');
     }
     public function index()
     {
-        $id_cafe = $this->session->userdata('id_cafe');
-        $data['title'] = 'Cafe Profil';
-        $data['list_reserv'] = $this->Reserv_model->getReservUser();
-        $data['acc_reserv'] = $this->Reserv_model->getCountAccReserv($id_cafe);
-        $data['refuse_reserv'] = $this->Reserv_model->getCountRefuseReserv($id_cafe);
-        $data['cancel_reserv'] = $this->Reserv_model->getCountCancelReserv($id_cafe);
-        // $data['kode_akses'] = $this->CafeProfil_model->open_cafe();
-        $this->load->view('utils/header-owner', $data);
-        $this->load->view('side_owner/cafe_profil', $data);
+        if ($this->LoginOwner_model->check_session()) {
+            $id_cafe = $this->session->userdata('id_cafe');
+            $data['title'] = 'Cafe Profil';
+            $data['list_reserv'] = $this->Reserv_model->getReservUser();
+            $data['acc_reserv'] = $this->Reserv_model->getCountAccReserv($id_cafe);
+            $data['refuse_reserv'] = $this->Reserv_model->getCountRefuseReserv($id_cafe);
+            $data['cancel_reserv'] = $this->Reserv_model->getCountCancelReserv($id_cafe);
+            // $data['kode_akses'] = $this->CafeProfil_model->open_cafe();
+            $this->load->view('utils/header-owner', $data);
+            $this->load->view('side_owner/cafe_profil', $data);
+        } else {
+            $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
+            redirect('errorpage');
+        }
     }
 
 

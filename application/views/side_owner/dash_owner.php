@@ -44,7 +44,6 @@
                                             <th>Jumlah Kursi</th>
                                             <th>Tanggal Reservasi</th>
                                             <th>Status Reservasi</th>
-
                                             <th>Bukti Pembayaran Komitmen</th>
 
                                         </tr>

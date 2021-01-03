@@ -110,7 +110,7 @@
                                         <?php foreach ($list_reserv as $notif) {
                                             if ($notif['status_reserv'] == 0) { ?>
                                                 <li>
-                                                    <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi<?= $notif['id_reserv']; ?>">
+                                                    <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi-new<?= $notif['id_reserv']; ?>">
                                                         <span class="mr-3 avatar-icon bg-info"><i class="ti-info-alt"></i></span>
                                                         <div class="notification-content">
                                                             <h6 class="notification-heading">Reservasi Baru</h6>
@@ -130,7 +130,7 @@
                                                 </li>
                                             <?php } elseif ($notif['status_reserv'] == 1) { ?>
                                                 <li>
-                                                    <a href="javascript:void()" data-toggle="modal" data-target="#">
+                                                    <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi<?= $notif['id_reserv']; ?>">
                                                         <span class="mr-3 avatar-icon bg-success"><i class="ti-face-smile"></i></span>
                                                         <div class="notification-content">
                                                             <h6 class="notification-heading">Penerimaan Reservasi</h6>
@@ -140,7 +140,7 @@
                                                 </li>
                                             <?php } elseif ($notif['status_reserv'] == 2) { ?>
                                                 <li>
-                                                    <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi-tolak">
+                                                    <a href="javascript:void()" data-toggle="modal" data-target="#detail-reservasi-tolak<?= $notif['id_reserv']; ?>">
                                                         <span class="mr-3 avatar-icon bg-danger"><i class="ti-face-sad"></i></span>
                                                         <div class="notification-content">
                                                             <h6 class="notification-heading">Penolakan Reservasi</h6>
@@ -152,11 +152,11 @@
 
 
                                             <!-- Modal Detail Menu -->
-                                            <div class="modal fade" id="detail-reservasi<?= $notif['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal fade" id="detail-reservasi-new<?= $notif['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title">Detail Reservasi</h5>
+                                                            <h5 class="modal-title">Detail Reservasi Baru</h5>
                                                             <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                                                             </button>
                                                         </div>
@@ -286,6 +286,7 @@
 
 
 
+
         <!--**********************************
             Sidebar start
         ***********************************-->
@@ -324,6 +325,165 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
+
+
+        <!-- Modal Detail Menu -->
+        <div class="modal fade" id="detail-reservasi<?= $notif['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail Reservasi Diterima</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <h4 class=" h4">No. Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6">#R00<?= $notif['id_reserv']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <h4 class=" h4">No. Meja</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6">Meja <?= $notif['no_meja']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+                                <div class="form-group">
+                                    <h4 class=" h4">Atas nama Cangkrukers</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['nama_user']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group mt-2">
+                                <div class="form-group">
+                                    <h4 class=" h4">Cafe Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['nama_cafe']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+                                <div class="form-group">
+                                    <h4 class=" h4">Biaya Komitmen Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6">Rp 15.000,-</h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+                                <div class="form-group">
+                                    <h4 class=" h4">Jumlah Kursi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['jumlah_kursi']; ?> Kursi</h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <h4 class=" h4">Tanggal Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['tgl_reserv']; ?> WIB</h6>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Detail Menu -->
+        <div class="modal fade" id="detail-reservasi-tolak<?= $notif['id_reserv']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail Penolakan Reservasi</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <h4 class=" h4">No. Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6">#R00<?= $notif['id_reserv']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+
+                                <div class="form-group">
+                                    <h4 class=" h4">Atas nama Cangkrukers</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['nama_user']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group mt-2">
+
+                                <div class="form-group">
+                                    <h4 class=" h4">Cafe Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['nama_cafe']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+                                <div class="form-group">
+                                    <h4 class=" h4">Biaya Komitmen Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6">Rp 15.000,-</h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+                                <div class="form-group">
+                                    <h4 class=" h4">Jumlah Kursi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['jumlah_kursi']; ?> Kursi</h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <h4 class=" h4">Tanggal Reservasi</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['tgl_reserv']; ?> WIB</h6>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <h4 class=" h4">Catatan Owner</h4>
+                                    <span class="ml-3 row">
+                                        <h6 class="mt-2 h6"><?= $notif['note_tolak']; ?></h6>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- Argon Scripts -->
         <script type="text/javascript">

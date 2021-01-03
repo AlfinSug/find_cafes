@@ -121,6 +121,154 @@
                     </div>
                 </div>
 
+
+                <!-- Modal Pay Guide -->
+                <div class="modal fade" id="payGuide" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Bank Virtual Account</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-tabs mb-3" role="tablist">
+                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#bca"><img width="" height="40" src="asset/logo_bank/bca.png" alt=""></span></a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bri"><img width="" height="40" src="asset/logo_bank/bri.png" alt=""></span></a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bni"><span><img width="" height="40" src="asset/logo_bank/bni.png" alt=""></span></a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mandiri"><span><img width="" height="40" src="asset/logo_bank/mandiri.png" alt=""></span></a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mandiri_syariah"><span><img width="" height="40" src="asset/logo_bank/mandiri_syariah.png" alt=""></span></a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content tabcontent-border">
+                                    <div class="tab-pane fade show active" id="bca" role="tabpanel">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Bank Central Asia</h5>
+                                                    <div class="row mt-5" style="margin-left:30%;">
+                                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">559889340500</h1>
+                                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="bri" role="tabpanel">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Bank Rakyat Indonesia</h5>
+                                                    <div class="row mt-5" style="margin-left:30%;">
+                                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">778974578987</h1>
+                                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="bni" role="tabpanel">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Bank Negara Indonesia</h5>
+                                                    <div class="row mt-5" style="margin-left:30%;">
+                                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">8775854400008</h1>
+                                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="mandiri" role="tabpanel">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Bank Mandiri</h5>
+                                                    <div class="row mt-5" style="margin-left:30%;">
+                                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">6674578988999</h1>
+                                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="mandiri_syariah" role="tabpanel">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Bank Mandiri Syariah</h5>
+                                                    <div class="row mt-5" style="margin-left:30%;">
+                                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">985678865434</h1>
+                                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="messages8" role="tabpanel">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Bank Central Asia</h5>
+                                                    <div class="row mt-5" style="margin-left:30%;">
+                                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">559889340500</h1>
+                                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
+
+                                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer mt-3">
+                                    <button type="button" class="btn btn-dark" data-dismiss="modal" data-toggle="modal" data-target="#reservNow<?= $row['id_cafe']; ?>">Kembali</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <?php } ?>
             <!-- End Col -->
 
@@ -148,152 +296,7 @@
 
 <!-- #/ container -->
 
-<!-- Modal Pay Guide -->
-<div class="modal fade" id="payGuide" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Bank Virtual Account</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul class="nav nav-tabs mb-3" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#bca"><img width="" height="40" src="asset/logo_bank/bca.png" alt=""></span></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bri"><img width="" height="40" src="asset/logo_bank/bri.png" alt=""></span></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bni"><span><img width="" height="40" src="asset/logo_bank/bni.png" alt=""></span></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mandiri"><span><img width="" height="40" src="asset/logo_bank/mandiri.png" alt=""></span></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mandiri_syariah"><span><img width="" height="40" src="asset/logo_bank/mandiri_syariah.png" alt=""></span></a>
-                    </li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content tabcontent-border">
-                    <div class="tab-pane fade show active" id="bca" role="tabpanel">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bank Central Asia</h5>
-                                    <div class="row mt-5" style="margin-left:30%;">
-                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">559889340500</h1>
-                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
 
-                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="bri" role="tabpanel">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bank Rakyat Indonesia</h5>
-                                    <div class="row mt-5" style="margin-left:30%;">
-                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">778974578987</h1>
-                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
-
-                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="bni" role="tabpanel">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bank Negara Indonesia</h5>
-                                    <div class="row mt-5" style="margin-left:30%;">
-                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">8775854400008</h1>
-                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
-
-                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="mandiri" role="tabpanel">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bank Mandiri</h5>
-                                    <div class="row mt-5" style="margin-left:30%;">
-                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">6674578988999</h1>
-                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
-
-                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="mandiri_syariah" role="tabpanel">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bank Mandiri Syariah</h5>
-                                    <div class="row mt-5" style="margin-left:30%;">
-                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">985678865434</h1>
-                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
-
-                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="messages8" role="tabpanel">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bank Central Asia</h5>
-                                    <div class="row mt-5" style="margin-left:30%;">
-                                        <h1 class="card-text text-center" id="nomor" spellcheck="false">559889340500</h1>
-                                        <button class="ml-3 btn btn-sm bg-white" id="copas" type="button">
-
-                                            <img class="text-center" height="30" src="asset/logo_bank/copy.png" alt="">
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer text-muted">*) Klik icon diatas untuk menyalin nomor bank virtual account</div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer mt-3">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal" data-toggle="modal" data-target="#reservNow">Kembali</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 

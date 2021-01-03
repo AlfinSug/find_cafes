@@ -7,21 +7,25 @@ class Profil_User extends CI_Controller
         parent::__construct();
         $this->load->model('UserProfil_model');
         $this->load->model('Reserv_model');
-        // $this->load->model('LoginUser_model');
+        $this->load->model('LoginUser_model');
         $this->load->library('session');
     }
 
     public function index()
     {
-        $id_user = $this->session->userdata('id_user');
-        $data['title'] = 'Profil User';
-        $data['list_reserv'] = $this->Reserv_model->getReservUser();
-
-        $data['acc_reserv_user'] = $this->Reserv_model->getCountAccReservUser($id_user);
-        $data['refuse_reserv_user'] = $this->Reserv_model->getCountRefuseReservUser($id_user);
-        $data['cancel_reserv_user'] = $this->Reserv_model->getCountCancelReservUser($id_user);
-        $this->load->view('utils/header-server', $data);
-        $this->load->view('side_user/profil_user');
+        if ($this->LoginUser_model->check_session()) {
+            $id_user = $this->session->userdata('id_user');
+            $data['title'] = 'Profil User';
+            $data['list_reserv'] = $this->Reserv_model->getReservUser();
+            $data['acc_reserv_user'] = $this->Reserv_model->getCountAccReservUser($id_user);
+            $data['refuse_reserv_user'] = $this->Reserv_model->getCountRefuseReservUser($id_user);
+            $data['cancel_reserv_user'] = $this->Reserv_model->getCountCancelReservUser($id_user);
+            $this->load->view('utils/header-server', $data);
+            $this->load->view('side_user/profil_user');
+        } else {
+            $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
+            redirect('errorpage');
+        }
     }
 
     public function edit_profil()
