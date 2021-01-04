@@ -79,7 +79,6 @@ class Reserv_model extends CI_Model
             'bukti_pembayaran' => $img_bukti,
 
         );
-
         $this->db->insert('reservation', $data);
     }
 
