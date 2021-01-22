@@ -16,7 +16,7 @@ class Cafe_Profil extends CI_Controller
         if ($this->LoginOwner_model->check_session()) {
             $id_cafe = $this->session->userdata('id_cafe');
             $data['title'] = 'Cafe Profil';
-            $data['list_reserv'] = $this->Reserv_model->getReservUser();
+            $data['list_reserv'] = $this->Reserv_model->getReservCafe();
             $data['acc_reserv'] = $this->Reserv_model->getCountAccReserv($id_cafe);
             $data['refuse_reserv'] = $this->Reserv_model->getCountRefuseReserv($id_cafe);
             $data['cancel_reserv'] = $this->Reserv_model->getCountCancelReserv($id_cafe);

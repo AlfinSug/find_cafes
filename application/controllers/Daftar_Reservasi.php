@@ -14,7 +14,7 @@ class Daftar_Reservasi extends CI_Controller
     {
         if ($this->LoginOwner_model->check_session()) {
             $data['title'] = 'Daftar Reservasi';
-            $data['list_reserv'] = $this->Reserv_model->getReservUser();
+            $data['list_reserv'] = $this->Reserv_model->getReservCafe();
             $this->load->view('utils/header-owner', $data);
             $this->load->view('side_owner/daftar_reservasi', $data);
         } else {

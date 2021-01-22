@@ -4,16 +4,19 @@ class Reserv_model extends CI_Model
 {
     public function getReservUser()
     {
-        $this->db->select('*');
-        $this->db->from('reservation');
-        $this->db->join('user_profil', 'reservation.id_user = user_profil.id_user');
-        $this->db->join('cafe_profil', 'reservation.id_cafe = cafe_profil.id_cafe');
-        return $this->db->get()->result_array();
+        $id_user = $this->session->userdata('id_user');
+        return $this->db->query('select r.id_reserv, u.nama_user, c.nama_cafe, r.tgl_reserv, r.jumlah_kursi, r.status_reserv, r.bukti_pembayaran, c.notelp_cafe from reservation r inner join user_profil u on u.id_user = r.id_user inner join cafe_profil c on c.id_cafe= r.id_cafe where u.id_user =' . $id_user)->result_array();
+    }
+    public function getReservCafe()
+    {
+        $id_cafe = $this->session->userdata('id_cafe');
+        return $this->db->query('select r.id_reserv, u.nama_user, c.nama_cafe, r.tgl_reserv, r.jumlah_kursi, r.status_reserv, r.bukti_pembayaran, c.notelp_cafe from reservation r inner join user_profil u on u.id_user = r.id_user inner join cafe_profil c on c.id_cafe= r.id_cafe where c.id_cafe =' . $id_cafe)->result_array();
     }
 
     public function getTotalReservasi()
     {
-        return $this->db->query('select count(id_reserv) as total_reserv from reservation')->result_array();
+        $id_cafe = $this->session->userdata('id_cafe');
+        return $this->db->query('select count(id_reserv) as total_reserv from reservation where id_cafe =' . $id_cafe)->result_array();
     }
 
     public function getCountAccReserv($id_cafe)

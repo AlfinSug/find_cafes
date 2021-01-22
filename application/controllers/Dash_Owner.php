@@ -14,7 +14,7 @@ class Dash_Owner extends CI_Controller
     {
         if ($this->LoginOwner_model->check_session()) {
             $data['title'] = 'Dashboard Owner';
-            $data['list_reserv'] = $this->Reserv_model->getReservUser();
+            $data['list_reserv'] = $this->Reserv_model->getReservCafe();
             $data['total_reserv'] = $this->Reserv_model->getTotalReservasi();
             $this->load->view('utils/header-owner', $data);
             $this->load->view('side_owner/dash_owner', $data);
