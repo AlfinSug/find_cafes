@@ -52,7 +52,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form action="<?= base_url(); ?>get_cafe/reserv_now" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url("get_cafe/reserv_now"); ?>" method="post" enctype="multipart/form-data">
                                     <input type="text" class="form-control rounded" placeholder="" name="id_reserv" hidden>
                                     <input type="text" class="form-control rounded" placeholder="" name="id_user" value="<?= $this->session->userdata['id_user']; ?>" hidden>
                                     <input type="text" class="form-control rounded" placeholder="" name="id_cafe" value="<?= $row['id_cafe']; ?>" hidden>

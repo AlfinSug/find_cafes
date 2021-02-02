@@ -81,7 +81,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="mb-4">Edit Profil Cafe</h3>
-                        <form action="<?= base_url(); ?>cafe_profil/edit_profils" class="form-profile" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url("cafe_profil/edit_profils"); ?>" class="form-profile" method="post" enctype="multipart/form-data">
                             <input type="text" class="form-control rounded" placeholder="" name="id_cafe" value="<?= $this->session->userdata('id_cafe'); ?>" hidden>
                             <div class="form-group mt-5">
                                 <label class="col-lg-12 col-form-label text-left" for="val-skill">Akses Cafe <span class="text-danger">*</span>

@@ -60,7 +60,7 @@
         ***********************************-->
         <div class="nav-header bg-warning ">
             <div class="brand-logo bg-warning">
-                <a href="<?= base_url(); ?>dashboard" class="mt--3">
+                <a href="<?= base_url(); ?>" class="mt--3">
                     <b class="logo-abbr bg-info"><img src="asset/logo_3.ico" alt=""> </b>
                     <span class="brand-title mb-5 bg-info">
                         <img src="asset/logo_nav.png" class="mt--2" alt="" width="50" height="40">
@@ -152,7 +152,7 @@
                             <i class="ti-user"></i> <span class="nav-text">Login</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="<?= base_url(); ?>auth_loginuser">Login User</a></li>
+                            <li><a href="<?= base_url("auth_loginuser"); ?>">Login User</a></li>
                             <li><a href="<?= base_url(); ?>auth_loginowner">Login Owner</a></li>
 
                         </ul>
