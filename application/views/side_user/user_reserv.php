@@ -63,7 +63,7 @@
                                             <td>
                                                 <?php if ($list['status_reserv'] == 0) { ?>
                                                     <div class="sweetalert m-t-30">
-                                                        <a href="user_reserv/canceled?id_reserv=<?= $list['id_reserv']; ?>&sval=<?= $list['status_reserv']; ?>" class="btn btn-danger btn sweet-confirm"><i class="ti-close mr-2"></i>Batal</a>
+                                                        <a href="user_Reserv/canceled?id_reserv=<?= $list['id_reserv']; ?>&sval=<?= $list['status_reserv']; ?>" class="btn btn-danger btn sweet-confirm"><i class="ti-close mr-2"></i>Batal</a>
                                                     </div>
                                                 <?php } elseif ($list['status_reserv'] == 1) { ?>
                                                     <!-- <div class="sweetalert m-t-30"> -->

@@ -1,6 +1,6 @@
 <?php
 
-class ErrorPage extends CI_Controller
+class errorPage extends CI_Controller
 {
     public function __construct()
     {

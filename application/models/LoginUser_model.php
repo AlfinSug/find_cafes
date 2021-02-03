@@ -28,10 +28,10 @@ class LoginUser_model extends CI_Model
             }
 
             $this->session->set_userdata($data);
-            redirect('get_cafe');
+            redirect('get_Cafe');
         } else {
             $this->session->set_flashdata('info', '<script>swal("Oops", "Nomor Telepon atau Password Anda Salah!", "error")</script>');
-            redirect('auth_loginuser');
+            redirect('auth_LoginUser');
         }
     }
 }

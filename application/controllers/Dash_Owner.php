@@ -20,7 +20,7 @@ class Dash_Owner extends CI_Controller
             $this->load->view('side_owner/dash_owner', $data);
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
-            redirect('errorpage');
+            redirect('errorPage');
         }
     }
 }

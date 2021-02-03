@@ -107,7 +107,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </ul>
               </li>
               <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-              <li class="scroll-to-section"><a href="<?= base_url("auth_loginuser"); ?>">Sign In</a></li>
+              <li class="scroll-to-section"><a href="<?= base_url(); ?>auth_LoginUser">Sign In</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>

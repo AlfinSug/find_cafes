@@ -19,6 +19,6 @@ class Auth_CreateOwner extends CI_Controller
     {
         $this->CreateOwner_model->createOwner();
         $this->session->set_flashdata('success', '<script>swal("Success", "Registrasi Owner Berhasil", "success")</script>');
-        redirect('auth_loginowner');
+        redirect('auth_LoginOwner');
     }
 }

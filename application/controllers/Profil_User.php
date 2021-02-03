@@ -24,7 +24,7 @@ class Profil_User extends CI_Controller
             $this->load->view('side_user/profil_user');
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
-            redirect('errorpage');
+            redirect('errorPage');
         }
     }
 
@@ -70,10 +70,10 @@ class Profil_User extends CI_Controller
             );
             $this->session->set_userdata($session_data);
             $this->session->set_flashdata('edit_success', '<script>swal("Data Change", "Profil anda telah berhasil diubah", "success")</script>');
-            redirect('profil_user');
+            redirect('profil_User');
         } else {
             $this->session->set_flashdata('edit_failed', '<script>swal("Data Change", "Profil anda telah berhasil diubah", "success")</script>');
-            redirect('profil_user');
+            redirect('profil_User');
         }
     }
 }

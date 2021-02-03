@@ -28,7 +28,7 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_createuser/create_acc" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_CreateUser/create_acc" method="post">
                                     <input class="form-control" name="id_user" placeholder="ID Pegawai" type="text" hidden>
                                     <div class="form-group">
                                         <label class="col-lg-12 col-form-label text-left" for="val-username">Fullname<span class="text-danger">*</span>
@@ -90,7 +90,7 @@
                                     </div>
                                     <button type="submit" class="btn btn-lg btn-warning text-white w-100 mt-5 rounded">Create Account</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">Already have an account? <a href="<?= base_url(); ?>auth_loginuser" class="text-primary">Login Now</a>
+                                <p class="mt-5 login-form__footer">Already have an account? <a href="<?= base_url(); ?>auth_LoginUser" class="text-primary">Login Now</a>
                             </div>
                         </div>
                     </div>

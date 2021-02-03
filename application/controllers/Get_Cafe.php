@@ -20,7 +20,7 @@ class Get_Cafe extends CI_Controller
             $this->load->view('side_user/get_cafe', $data);
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
-            redirect('errorpage');
+            redirect('errorPage');
         }
     }
 
@@ -28,6 +28,6 @@ class Get_Cafe extends CI_Controller
     {
         $this->Reserv_model->reservation();
         $this->session->set_flashdata('success', '<script>swal("Reservation", "Reservasi berhasil, tunggu owner sampai mengonfirmasi reservasi anda", "success")</script>');
-        redirect('get_cafe');
+        redirect('get_Cafe');
     }
 }

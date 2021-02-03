@@ -66,7 +66,7 @@ class Reserv_model extends CI_Model
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('bukti_pembayaran')) {
                 $this->session->set_flashdata('file_failed', '<script>swal("Format File", "Format gambar yang diperbolehkan adalah .jpg/.png", "error")</script>');
-                redirect('get_cafe');
+                redirect('get_Cafe');
             } else {
                 $img_bukti = $this->upload->data('file_name');
             }

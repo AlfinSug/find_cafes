@@ -8,7 +8,7 @@
             <h4>Find Cafe's</h4>
             <h6>THE BEST INOVATION</h6>
             <div class="main-white-button scroll-to-section">
-              <a href=" <?= base_url(); ?>auth_loginuser">Make A Reservation</a>
+              <a href=" <?= base_url(); ?>auth_LoginUser">Make A Reservation</a>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
 
           </div>
           <div class="card-footer text-center">
-            <a href="<?= base_url(); ?>auth_loginuser">
+            <a href="<?= base_url(); ?>auth_LoginUser">
               <?php if ($row['akses_cafe'] == 'online') { ?>
                 <button type="button" class="btn btn-lg btn-warning text-white ml-2 mt-2 mb-2" data-toggle="modal" data-target="#reservNow<?= $row['id_cafe']; ?>">Pesan Sekarang</button>
               <?php } elseif ($row['akses_cafe'] == 'offline') { ?>

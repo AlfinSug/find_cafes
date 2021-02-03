@@ -190,10 +190,10 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="<?= base_url(); ?>profil_user"><i class="icon-user"></i> <span>Profil Cafe</span></a>
+                                            <a href="<?= base_url(); ?>profil_User"><i class="icon-user"></i> <span>Profil Cafe</span></a>
                                         </li>
 
-                                        <li><a href="<?= base_url(); ?>auth_loginowner/logout_owner"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
+                                        <li><a href="<?= base_url(); ?>auth_LoginOwner/logout_owner"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -219,12 +219,12 @@
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Main</li>
                     <li>
-                        <a href="<?= base_url(); ?>dash_owner" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>dash_Owner" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-layout"></i><span class="nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url(); ?>daftar_reservasi" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>daftar_Reservasi" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-menu-alt"></i><span class="nav-text">Daftar Reservasi</span>
                         </a>
                     </li>
@@ -239,7 +239,7 @@
                         </ul>
                     </li> -->
                     <li>
-                        <a href="<?= base_url(); ?>cafe_profil" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>cafe_Profil" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-direction"></i> <span class="nav-text">Cafe Profil</span>
                         </a>
                     </li>

@@ -36,7 +36,7 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_loginuser/login_user" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_LoginUser/login_user" method="post">
 
                                     <div class="form-group">
                                         <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Whatsapp Number <span class="text-danger">*</span>
@@ -56,7 +56,7 @@
 
                                     <button type="submit" class="btn btn-lg w-100 text-white mt-5 btn-warning rounded">Sign In</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">Don't have an account yet? <a href="<?= base_url(); ?>auth_createuser" class="text-primary">Create Account</a>
+                                <p class="mt-5 login-form__footer">Don't have an account yet? <a href="<?= base_url(); ?>auth_CreateUser" class="text-primary">Create Account</a>
                             </div>
                         </div>
                     </div>

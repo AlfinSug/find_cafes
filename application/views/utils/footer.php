@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="logo">
-                    <a href="index.html"><img width="250" height="50" src="asset/logo_nav.png" alt=""></a>
+                    <a href="<?= base_url(); ?>"><img width="250" height="50" src="asset/logo_nav.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-4 col-xs-12">

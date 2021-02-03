@@ -19,7 +19,7 @@ class Daftar_Reservasi extends CI_Controller
             $this->load->view('side_owner/daftar_reservasi', $data);
         } else {
             $this->session->set_flashdata('session_failed', '<script>swal("Login Access", "Anda harus login terlebih dahulu", "info")</script>');
-            redirect('errorpage');
+            redirect('errorPage');
         }
     }
 
@@ -30,7 +30,7 @@ class Daftar_Reservasi extends CI_Controller
             if ($res > 0) {
                 $this->session->set_flashdata('edit_success', '<script>swal("Cancel", "Reservasi telah dibatalkan", "success")</script>');
             }
-            return redirect('daftar_reservasi');
+            return redirect('daftar_Reservasi');
         }
     }
 
@@ -41,7 +41,7 @@ class Daftar_Reservasi extends CI_Controller
             if ($res > 0) {
                 $this->session->set_flashdata('edit_success', '<script>swal("Cancel", "Reservasi telah dibatalkan", "success")</script>');
             }
-            return redirect('daftar_reservasi');
+            return redirect('daftar_Reservasi');
         }
     }
 }

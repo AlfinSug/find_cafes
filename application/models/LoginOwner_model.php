@@ -32,10 +32,10 @@ class LoginOwner_model extends CI_Model
             }
 
             $this->session->set_userdata($data);
-            redirect('dash_owner');
+            redirect('dash_Owner');
         } else {
             $this->session->set_flashdata('info', '<script>swal("Oops", "Email atau Password Cafe Anda Salah!", "error")</script>');
-            redirect('auth_loginowner');
+            redirect('auth_LoginOwner');
         }
     }
 }

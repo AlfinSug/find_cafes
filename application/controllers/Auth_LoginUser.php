@@ -40,6 +40,6 @@ class Auth_LoginUser extends CI_Controller
     {
         $this->session->sess_destroy();
         $this->session->set_flashdata('logout_success', '<script>swal("Logout Success", "Anda berhasil logout", "success")</script>');
-        redirect('auth_loginuser');
+        redirect('auth_LoginUser');
     }
 }

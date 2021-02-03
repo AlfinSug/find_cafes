@@ -152,8 +152,8 @@
                             <i class="ti-user"></i> <span class="nav-text">Login</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="<?= base_url("auth_loginuser"); ?>">Login User</a></li>
-                            <li><a href="<?= base_url(); ?>auth_loginowner">Login Owner</a></li>
+                            <li><a href="<?= base_url(); ?>auth_LoginUser">Login User</a></li>
+                            <li><a href="<?= base_url(); ?>auth_LoginOwner">Login Owner</a></li>
 
                         </ul>
                     </li>
@@ -162,8 +162,8 @@
                             <i class="ti-support"></i> <span class="nav-text">Create Account</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="<?= base_url(); ?>auth_createuser">Create Account User</a></li>
-                            <li><a href="<?= base_url(); ?>auth_createowner">Create Account Owner</a></li>
+                            <li><a href="<?= base_url(); ?>auth_CreateUser">Create Account User</a></li>
+                            <li><a href="<?= base_url(); ?>auth_CreateOwner">Create Account Owner</a></li>
                         </ul>
                     </li>
                 </ul>

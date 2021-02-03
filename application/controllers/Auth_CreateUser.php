@@ -20,6 +20,6 @@ class Auth_CreateUser extends CI_Controller
     {
         $this->CreateUser_model->createUser();
         $this->session->set_flashdata('success', '<script>swal("Success", "Registrasi User Berhasil", "success")</script>');
-        redirect('auth_loginuser');
+        redirect('auth_LoginUser');
     }
 }

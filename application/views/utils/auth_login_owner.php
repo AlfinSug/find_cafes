@@ -28,7 +28,7 @@
                                     </h4>
                                 </a>
 
-                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_loginowner/login_owner" method="post">
+                                <form class="mt-5 mb-5 form-valide" action="<?= base_url() ?>auth_LoginOwner/login_owner" method="post">
 
                                     <div class="form-group">
                                         <label class="col-lg-12 col-form-label text-left" for="val-phoneus">Email Cafe<span class="text-danger">*</span>

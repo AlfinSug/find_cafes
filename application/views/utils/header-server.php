@@ -199,10 +199,10 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="<?= base_url(); ?>profil_user"><i class="icon-user"></i> <span>Profil Saya</span></a>
+                                            <a href="<?= base_url(); ?>profil_User"><i class="icon-user"></i> <span>Profil Saya</span></a>
                                         </li>
 
-                                        <li><a href="<?= base_url(); ?>auth_loginuser/logout_user"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
+                                        <li><a href="<?= base_url(); ?>auth_LoginUser/logout_user"><i class="ti-share-alt"></i> <span>Keluar</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Main</li>
                     <li>
-                        <a href="<?= base_url(); ?>get_cafe" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>get_Cafe" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-map-alt"></i><span class="nav-text">All Cafe's</span>
                         </a>
 
@@ -233,13 +233,13 @@
 
                     <li class="nav-label">Master</li>
                     <li>
-                        <a href="<?= base_url(); ?>user_reserv" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>user_Reserv" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-receipt"></i> <span class="nav-text">Reservation</span>
                         </a>
 
                     </li>
                     <li>
-                        <a href="<?= base_url(); ?>profil_user" class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a href="<?= base_url(); ?>profil_User" class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="ti-user"></i> <span class="nav-text">Profil</span>
                         </a>
 

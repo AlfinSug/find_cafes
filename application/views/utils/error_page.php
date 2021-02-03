@@ -41,7 +41,7 @@
                                 <h6>Maaf, Anda Harus Login Terlebih Dahulu</h6>
                                 <form class="mt-5 mb-5">
 
-                                    <div class="text-center mb-4 mt-4"><a href="<?= base_url(); ?>auth_loginuser" class="btn btn-primary">Go to Login Page</a>
+                                    <div class="text-center mb-4 mt-4"><a href="<?= base_url(); ?>auth_LoginUser" class="btn btn-primary">Go to Login Page</a>
                                     </div>
                                 </form>
                                 <div class="text-center">

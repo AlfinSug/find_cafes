@@ -68,7 +68,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="mb-4">Edit Profil</h3>
-                    <form action="<?= base_url(); ?>profil_user/edit_profil" class="form-profile text-center" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url(); ?>profil_User/edit_profil" class="form-profile text-center" method="post" enctype="multipart/form-data">
                         <input type="text" class="form-control rounded" placeholder="" name="id_user" value="<?= $this->session->userdata('id_user'); ?>" hidden>
                         <!-- <div class="input-group form-group mt--4 text-center">
                             <div class="col-lg-12 mt-5 text-center" style="display: block; margin: -2% auto 2% auto;">
