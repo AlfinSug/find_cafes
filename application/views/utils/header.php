@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="asset/logo_3.ico">
-  <title>Find Cafe - <?php echo $title ?></title>
+  <link rel="icon" href="asset/witch.png">
+  <title>Find Mage - <?php echo $title ?></title>
 
   <!-- Pignose Calender -->
   <link href="quixlab/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
@@ -77,7 +77,7 @@ https://templatemo.com/tm-558-klassy-cafe
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.php" class="logo">
-              <img src="asset/logo_nav.png" align="klassy cafe html template" width="230" height="50">
+              <img src="asset/logo_mage.png" align="klassy cafe html template" width="230" height="50">
 
             </a>
             <!-- ***** Logo End ***** -->
@@ -97,7 +97,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                         -->
               <li class="scroll-to-section"><a href="#menu">Popular</a></li>
-              <li class="scroll-to-section"><a href="<?= base_url("catalog"); ?>">Cafe's</a></li>
+              <li class="scroll-to-section"><a href="<?= base_url("catalog"); ?>">Mage's</a></li>
               <li class="submenu">
                 <a href="javascript:;">Contact</a>
                 <ul>

@@ -5,8 +5,8 @@
       <div class="col-lg-4">
         <div class="left-content">
           <div class="inner-content">
-            <h4>Find Cafe's</h4>
-            <h6>THE BEST INOVATION</h6>
+            <h4>Find Mage</h4>
+            <h6>The Best Magician</h6>
             <div class="main-white-button scroll-to-section">
               <a href=" <?= base_url(); ?>auth_LoginUser">Make A Reservation</a>
             </div>
@@ -19,21 +19,21 @@
             <!-- Item -->
             <div class="item">
               <div class="img-fill">
-                <img src="assets/images/slide-01.jpg" alt="">
+                <img src="asset/img_cs1.jpg" alt="">
               </div>
             </div>
             <!-- // Item -->
             <!-- Item -->
             <div class="item">
               <div class="img-fill">
-                <img src="assets/images/slide-02.jpg" alt="">
+                <img src="asset/img_cs2.jpg" alt="">
               </div>
             </div>
             <!-- // Item -->
             <!-- Item -->
             <div class="item">
               <div class="img-fill">
-                <img src="assets/images/slide-03.jpg" alt="">
+                <img src="asset/img_cs3.jpg" alt="">
               </div>
             </div>
             <!-- // Item -->
